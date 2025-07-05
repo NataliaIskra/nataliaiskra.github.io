@@ -183,9 +183,18 @@
         .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; }
         .pricing-card .feature-unavailable { color: #aaa; }
         .pricing-card .feature-unavailable i { color: #ccc; }
+        
+        /* --- ИЗМЕНЕНИЯ В ФУТЕРЕ ЗДЕСЬ --- */
         .main-footer { background: var(--color-light-gray); padding: var(--spacing-xl) 0 0; border-top: 1px solid var(--color-border); }
-        .footer-container { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
-        .footer-about { margin-bottom: var(--spacing-lg); }
+        .footer-container { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: var(--spacing-lg); 
+            text-align: left;
+        }
+        .footer-about .logo {
+             margin-bottom: var(--spacing-md);
+        }
         .footer-links h4, .footer-community h4, .footer-contact h4 {
           font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-md);
         }
@@ -193,6 +202,15 @@
         .footer-contact p { margin-bottom: var(--spacing-sm); }
         a.footer-contact-link:hover { color: var(--color-primary); }
         .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+        
+        @media (min-width: 992px) { /* Изменил breakpoint для лучшего вида */
+          .footer-container {
+            grid-template-columns: repeat(4, 1fr); /* 4 равные колонки */
+            align-items: start; /* Выравнивание по верху */
+          }
+        }
+        /* --- КОНЕЦ ИЗМЕНЕНИЙ --- */
+
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
           .menu-toggle-btn { display: none; }
@@ -208,7 +226,6 @@
           .cta-content { text-align: left; }
           .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
           .cta-image-desktop { display: block; flex-shrink: 0; flex: 0 0 40%; }
-          .footer-container { grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: var(--spacing-lg); }
         }
         .main-nav-mobile {
           display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg);
