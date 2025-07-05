@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iskra Montessori - Наш центр развития</title>
+    <title>Фрушка Искра - Центр развития для детей и родителей</title>
+    <meta name="description" content="Фрушка Искра - это Монтессори-школа 'Искра' и онлайн-проект для родителей BloomKids. Современная образовательная среда, основанная на гуманистической педагогике.">
 
     <!-- Полный набор Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -11,103 +12,215 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
+    
     <style>
         :root {
           --color-primary: #D4A01D;
           --color-secondary: #D87C5B;
-          --color-background: #FFFBF5;
+          --color-background: #FFFFFF;
           --color-text: #4A4A4A;
           --color-white: #FFFFFF;
-          --border-radius-soft: 20px;
-          --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+          --color-light-gray: #FFFBF5;
+          --color-border: #FBEEDA;
+        
           --font-primary: 'Your Display Font', serif;
           --font-secondary: 'Your Body Font', sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
+          
+          --spacing-md: 16px;
+          --spacing-lg: 32px;
+          --spacing-xl: 64px;
+          
+          --border-radius-soft: 20px;
+          --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
         }
         
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: var(--font-secondary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: var(--color-background);
-            color: var(--color-text);
+          font-family: var(--font-secondary);
+          background-color: var(--color-background);
+          color: var(--color-text);
+          line-height: 1.6;
+        }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+        .section-title {
+          font-family: var(--font-primary);
+          color: var(--color-secondary);
+          font-size: 2.5rem;
+          text-align: center;
+          margin-bottom: var(--spacing-lg);
+        }
+        .btn {
+          display: inline-block;
+          padding: 12px 28px;
+          border-radius: 50px;
+          font-weight: bold;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          border: none;
+          text-decoration: none;
+        }
+        .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
+        .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
+
+        .hero-section {
+            padding: var(--spacing-xl) 0;
             text-align: center;
-            padding: 20px;
+            background: var(--color-light-gray);
         }
-
-        .container {
-            background-color: var(--color-white);
-            padding: 32px;
-            border-radius: var(--border-radius-soft);
-            box-shadow: var(--shadow);
-            max-width: 600px;
-            width: 100%;
-            border: 1px solid #FBEEDA;
+        .hero-logo img { height: 60px; margin: 0 auto var(--spacing-md); }
+        .hero-section h1 {
+            font-family: var(--font-primary);
+            font-size: clamp(2.5rem, 2rem + 4vw, 4rem);
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-md);
         }
-
-        .logo {
-            margin-bottom: 16px;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
             margin: 0 auto;
         }
-        
-        h1 {
+
+        .projects-section { padding: var(--spacing-xl) 0; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-soft);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--color-border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+        }
+        .project-card h3 {
             font-family: var(--font-primary);
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: var(--color-secondary);
-            margin-bottom: 16px;
+            margin-bottom: var(--spacing-sm);
         }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        a.btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 28px;
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+        .project-card p { margin-bottom: var(--spacing-lg); }
         
-        a.btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3);
+        .philosophy-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
+        .features-grid {
+          display: grid;
+          gap: var(--spacing-lg);
+          grid-template-columns: 1fr;
         }
+        .feature-card {
+          text-align: center;
+        }
+        .feature-icon-wrapper {
+          width: 60px; height: 60px;
+          margin: 0 auto var(--spacing-md);
+          border-radius: 50%;
+          background-color: var(--color-white);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 1.8rem;
+          color: var(--color-secondary);
+        }
+        .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; }
 
+        .main-footer { padding: var(--spacing-xl) 0; text-align: center; }
+        .footer-container p { margin-bottom: var(--spacing-md); }
+        .social-icons { display: flex; gap: var(--spacing-md); font-size: 1.5rem; justify-content: center; }
+        .social-icons a:hover { color: var(--color-primary); }
+        
         @media (min-width: 768px) {
-            .container {
-                padding: 48px;
-            }
+          .projects-grid { grid-template-columns: 1fr 1fr; }
+          .features-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (min-width: 1024px) {
+          .features-grid { grid-template-columns: repeat(4, 1fr); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.svg" alt="Логотип Iskra Montessori">
-        </div>
-        <h1>Iskra Montessori</h1>
-        <p>Добро пожаловать на страницу нашего центра! Здесь скоро появится полная информация о нашей школе, методиках и команде.</p>
-        <p>А пока вы можете ознакомиться с нашим замечательным проектом для родителей, нянь и педагогов:</p>
-        <a href="bloomkids/index.html" class="btn">Перейти к проекту BloomKids</a>
-    </div>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-logo">
+                    <img src="images/logo.svg" alt="Логотип Фрушка Искра">
+                </div>
+                <h1>Фрушка Искра: Пространство развития для детей и родителей</h1>
+                <p>Мы создаем современную образовательную среду, основанную на гуманистической педагогике. У нас вы найдете Монтессори-школу "Искра" и онлайн-гид для родителей "BloomKids".</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Наши проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div>
+                            <h3>Монтессори-школа "Искра"</h3>
+                            <p>Наше оффлайн-пространство в [Ваш город], где дети от 1,5 до 7 лет растут самостоятельными и уверенными в себе в заботливой Монтессори-среде.</p>
+                        </div>
+                        <a href="#contacts" class="btn btn-secondary">Связаться с нами</a>
+                    </div>
+                    <div class="project-card">
+                        <div>
+                            <h3>Онлайн-проект "BloomKids"</h3>
+                            <p>Ваш персональный гид по развитию ребенка 3-6 лет дома. Готовые планы занятий и сотни идей для совместных активностей, основанных на гуманистической педагогике.</p>
+                        </div>
+                        <a href="bloomkids/" class="btn btn-primary">Перейти на сайт BloomKids</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="philosophy" class="philosophy-section">
+            <div class="container">
+                <h2 class="section-title">Наш подход: Уважение и свобода</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-hand-holding-heart"></i></div>
+                        <h3>Уважение к личности</h3>
+                        <p>Мы не сравниваем детей, а следуем за их индивидуальным темпом развития.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-star"></i></div>
+                        <h3>Подготовленная среда</h3>
+                        <p>Пространство, где всё доступно, понятно и соответствует потребностям детей.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-leaf"></i></div>
+                        <h3>Свобода выбора</h3>
+                        <p>Ребенок сам выбирает занятие, что развивает его внутреннюю мотивацию.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-users-alt"></i></div>
+                        <h3>Поддержка родителей</h3>
+                        <p>Мы верим, что родители — главные эксперты по своему ребенку, и помогаем им.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacts" class="main-footer">
+      <div class="container footer-container">
+          <h2 class="section-title">Контакты</h2>
+          <p>Свяжитесь с нами, чтобы узнать больше о Монтессори-школе "Искра" или задать любой вопрос.</p>
+          <div class="social-icons">
+            <a href="https://t.me/natalia_frushkaiskra" target="_blank"><i class="fi fi-brands-telegram"></i></a>
+            <a href="https://www.instagram.com/frushka_iskra/" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+          </div>
+          <p style="margin-top: 32px; font-size: 0.9rem;">© 2024 Фрушка Искра</p>
+      </div>
+    </footer>
+
 </body>
 </html>
