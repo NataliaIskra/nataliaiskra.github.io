@@ -183,17 +183,20 @@
         .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; }
         .pricing-card .feature-unavailable { color: #aaa; }
         .pricing-card .feature-unavailable i { color: #ccc; }
+        .main-footer { background: var(--color-light-gray); padding: var(--spacing-xl) 0 0; border-top: 1px solid var(--color-border); }
         
         /* --- ИЗМЕНЕНИЯ В ФУТЕРЕ ЗДЕСЬ --- */
-        .main-footer { background: var(--color-light-gray); padding: var(--spacing-xl) 0 0; border-top: 1px solid var(--color-border); }
         .footer-container { 
             display: grid; 
             grid-template-columns: 1fr; 
             gap: var(--spacing-lg); 
-            text-align: left;
+            text-align: center;
+        }
+        .footer-about {
+            text-align: center;
         }
         .footer-about .logo {
-             margin-bottom: var(--spacing-md);
+             margin: 0 auto var(--spacing-md);
         }
         .footer-links h4, .footer-community h4, .footer-contact h4 {
           font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-md);
@@ -203,11 +206,23 @@
         a.footer-contact-link:hover { color: var(--color-primary); }
         .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
         
-        @media (min-width: 992px) { /* Изменил breakpoint для лучшего вида */
+        @media (min-width: 992px) {
           .footer-container {
-            grid-template-columns: repeat(4, 1fr); /* 4 равные колонки */
-            align-items: start; /* Выравнивание по верху */
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: var(--spacing-xl);
+            text-align: left;
+            align-items: start;
           }
+           .footer-about {
+             display: flex;
+             align-items: start;
+             gap: var(--spacing-md);
+             text-align: left;
+           }
+           .footer-about .logo {
+             margin: 0;
+             flex-shrink: 0;
+           }
         }
         /* --- КОНЕЦ ИЗМЕНЕНИЙ --- */
 
