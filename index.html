@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фрушка Искра - Центр развития для детей и родителей</title>
-    <meta name="description" content="Фрушка Искра - это Монтессори-школа 'Искра' и онлайн-проект для родителей BloomKids. Современная образовательная среда, основанная на гуманистической педагогике.">
+    <title>Фрушка Искра - Монтессори-школа и центр развития для детей и родителей</title>
+    <meta name="description" content="Фрушка Искра - это Монтессори-школа 'Искра' в Нови-Саде (Сербия) и онлайн-проект для родителей BloomKids. Современная образовательная среда, основанная на гуманистической педагогике.">
    
     <link rel="canonical" href="https://iskramontessori.com/" />
     
@@ -14,27 +14,28 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
+    <!-- Иконки -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
 
-    
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(103263687, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103263687" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+       ym(103263687, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/103263687" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     
+    <!-- Стили -->
     <style>
         :root {
           --color-primary: #D4A01D;
@@ -45,14 +46,17 @@
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
         
-          --font-primary: 'Your Display Font', serif;
-          --font-secondary: 'Your Body Font', sans-serif;
+          /* Рекомендую выбрать и подключить шрифты, например, с Google Fonts */
+          --font-primary: 'Merriweather', serif; /* Пример элегантного шрифта для заголовков */
+          --font-secondary: 'Nunito Sans', sans-serif; /* Пример чистого шрифта для текста */
           
+          --spacing-sm: 8px;
           --spacing-md: 16px;
           --spacing-lg: 32px;
           --spacing-xl: 64px;
           
           --border-radius-soft: 20px;
+          --border-radius-sharp: 12px;
           --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
         }
         
@@ -63,14 +67,26 @@
           background-color: var(--color-background);
           color: var(--color-text);
           line-height: 1.6;
+          font-size: 16px;
         }
         .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        .logo img { height: 48px; width: auto; }
         .section-title {
           font-family: var(--font-primary);
           color: var(--color-secondary);
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           text-align: center;
-          margin-bottom: var(--spacing-lg);
+          margin-bottom: var(--spacing-md);
+          line-height: 1.2;
+        }
+        .section-subtitle {
+          text-align: center;
+          max-width: 650px;
+          margin: 0 auto var(--spacing-lg);
+          font-size: 1.1rem;
+          color: #6e6e6e;
         }
         .btn {
           display: inline-block;
@@ -81,167 +97,371 @@
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           cursor: pointer;
           border: none;
-          text-decoration: none;
         }
         .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
         .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
-
-        .hero-section {
-            padding: var(--spacing-xl) 0;
-            text-align: center;
-            background: var(--color-light-gray);
-        }
-        .hero-logo img { height: 60px; margin: 0 auto var(--spacing-md); }
-        .hero-section h1 {
-            font-family: var(--font-primary);
-            font-size: clamp(2.5rem, 2rem + 4vw, 4rem);
-            color: var(--color-secondary);
-            margin-bottom: var(--spacing-md);
-        }
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .projects-section { padding: var(--spacing-xl) 0; }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-lg);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .project-card {
-            background-color: var(--color-white);
-            border-radius: var(--border-radius-soft);
-            padding: var(--spacing-lg);
-            border: 1px solid var(--color-border);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: var(--shadow);
-        }
-        .project-card h3 {
-            font-family: var(--font-primary);
-            font-size: 1.8rem;
-            color: var(--color-secondary);
-            margin-bottom: var(--spacing-sm);
-        }
-        .project-card p { margin-bottom: var(--spacing-lg); }
         
-        .philosophy-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
-        .features-grid {
-          display: grid;
-          gap: var(--spacing-lg);
-          grid-template-columns: 1fr;
+        .main-header {
+          padding: var(--spacing-md) 0;
+          position: sticky;
+          top: 0;
+          background-color: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          z-index: 100;
+          border-bottom: 1px solid var(--color-border);
         }
-        .feature-card {
-          text-align: center;
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .main-nav { display: none; }
+        .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
+        .main-nav a:hover { color: var(--color-primary); }
+        .menu-toggle-btn {
+          background: none; border: none; font-size: 1.5rem; color: var(--color-secondary);
+          cursor: pointer; display: block;
         }
-        .feature-icon-wrapper {
-          width: 60px; height: 60px;
-          margin: 0 auto var(--spacing-md);
-          border-radius: 50%;
-          background-color: var(--color-white);
-          display: flex; align-items: center; justify-content: center;
-          font-size: 1.8rem;
-          color: var(--color-secondary);
-        }
-        .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; }
 
-        .main-footer { padding: var(--spacing-xl) 0; text-align: center; }
-        .footer-container p { margin-bottom: var(--spacing-md); }
-        .social-icons { display: flex; gap: var(--spacing-md); font-size: 1.5rem; justify-content: center; }
-        .social-icons a:hover { color: var(--color-primary); }
+        .hero-section { background-color: var(--color-light-gray); padding: var(--spacing-lg) 0 var(--spacing-xl); }
+        .hero-container {
+          display: flex; flex-direction: column; align-items: center; text-align: center;
+        }
+        .hero-content { margin-bottom: var(--spacing-lg); }
+        .hero-title {
+          font-family: var(--font-primary);
+          font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem);
+          line-height: 1.2;
+          margin-bottom: var(--spacing-md);
+          overflow-wrap: break-word;
+          text-wrap: balance;
+        }
+        .hero-subtitle { font-size: 1.1rem; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-image-wrapper img { border-radius: var(--border-radius-soft); box-shadow: var(--shadow); object-fit: cover; width: 100%; height: 100%; }
+        
+        .features-section { padding: var(--spacing-xl) 0; }
+        .features-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
+        .feature-card {
+          background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center;
+          border: 1px solid var(--color-border);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .feature-icon-wrapper {
+          width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%;
+          background-color: var(--color-light-gray); display: flex; align-items: center;
+          justify-content: center; font-size: 1.8rem; color: var(--color-secondary);
+        }
+        .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); color: var(--color-secondary); }
+
+        .about-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
+        .about-section .tab-content-inner { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); align-items: start; }
+        .about-section .tab-text { background-color: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); height: 100%; border: 1px solid var(--color-border); }
+        .about-section .tab-text h3 { color: var(--color-secondary); font-family: var(--font-primary); font-size: 1.8rem; margin-bottom: var(--spacing-sm); }
+        .about-section .tab-text ul li { display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-md); }
+        .about-section .tab-text ul#subjects-list li { margin-bottom: var(--spacing-sm); }
+        .about-section .tab-text ul li i { color: var(--color-primary); font-size: 1.1rem; }
+        
+        .testimonials-section { padding: var(--spacing-xl) 0; }
+        .testimonials-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
+        .testimonial-card {
+            background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .testimonial-header { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+        .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--color-white); object-fit: cover; }
+        .testimonial-header h4 { font-family: var(--font-primary); font-size: 1.2rem; color: var(--color-text); line-height: 1.3; }
+        .testimonial-card p { font-style: italic; color: #555; }
+        
+        .cta-section { padding: var(--spacing-xl) 0; }
+        .cta-container {
+          display: flex; flex-direction: column; background-color: var(--color-light-gray);
+          padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border);
+        }
+        .cta-content { flex: 1; text-align: center; }
+        .cta-content .section-title { text-align: center; }
+        .cta-content p { max-width: 500px; margin: 0 auto var(--spacing-lg); }
+        .cta-image-desktop { display: none; }
+        
+        .pricing-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
+        .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
+        .pricing-card {
+            background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg);
+            text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s;
+            display: flex; flex-direction: column;
+        }
+        .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
+        .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); }
+        .plan-age-focus { font-size: 0.9rem; color: #777; margin-bottom: var(--spacing-md); }
+        .pricing-card .features-list { list-style: none; margin-bottom: var(--spacing-lg); text-align: left; flex-grow: 1; padding: 0;}
+        .pricing-card .features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: var(--spacing-sm); }
+        .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; margin-top: 3px; }
+        .pricing-footnote {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            line-height: 1.7;
+        }
+        
+        .main-footer { background: var(--color-light-gray); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
+        .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
         
         @media (min-width: 768px) {
-          .projects-grid { grid-template-columns: 1fr 1fr; }
-          .features-grid { grid-template-columns: 1fr 1fr; }
+          .section-title { font-size: 2.8rem; }
+          .menu-toggle-btn { display: none; }
+          .main-nav { display: flex; align-items: center; }
+          .hero-container { flex-direction: row; text-align: left; gap: var(--spacing-lg); }
+          .hero-content { flex: 1; }
+          .hero-image-wrapper { flex: 1; }
+          .features-grid { grid-template-columns: repeat(2, 1fr); }
+          .about-section .tab-content-inner { grid-template-columns: 1fr 1fr; }
+          .testimonials-grid { 
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 800px; margin: 0 auto; }
+          .cta-container { flex-direction: row; align-items: center; gap: var(--spacing-xl); padding: var(--spacing-xl); }
+          .cta-content { text-align: left; }
+          .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
+          .cta-image-desktop { display: block; flex-shrink: 0; flex: 0 0 40%; }
+          .cta-image-desktop img { border-radius: var(--border-radius-soft); object-fit: cover; width: 100%; height: 100%;}
         }
-        @media (min-width: 1024px) {
-          .features-grid { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (min-width: 992px) {
+            .features-grid { grid-template-columns: repeat(4, 1fr); }
         }
+
+        .main-nav-mobile {
+          display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg);
+          position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background);
+          transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99;
+        }
+        .main-nav-mobile.active { transform: translateX(0); }
+        .main-nav-mobile a { font-size: 1.5rem; font-weight: bold; color: var(--color-secondary); }
     </style>
 </head>
+
 <body>
 
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="/" class="logo">
+          <img src="images/logo.svg" alt="Логотип Фрушка Искра">
+        </a>
+        <nav class="main-nav">
+          <a href="#philosophy">Наш подход</a>
+          <a href="#program">Программа</a>
+          <a href="#">Блог</a>
+          <a href="#team">Команда</a>
+          <a href="#pricing">Стоимость</a>
+          <a href="bloomkids/" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 20px;">BloomKids</a>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle-btn">
+          <i class="fi fi-rr-menu-burger"></i>
+        </button>
+      </div>
+    </header>
+    
     <main>
         <section class="hero-section">
-            <div class="container">
-                <div class="hero-logo">
-                    <img src="images/logo.svg" alt="Логотип Фрушка Искра">
-                </div>
-                <h1>Фрушка Искра: Пространство развития для детей и родителей</h1>
-                <p>Мы создаем современную образовательную среду, основанную на гуманистической педагогике. У нас вы найдете Монтессори-школу "Искра" и онлайн-гид для родителей "BloomKids".</p>
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Фрушка Искра: Монтессори-школа в Нови-Саде</h1>
+                <p class="hero-subtitle">Первая в Сербии школа педагогики Монтессори для детей 6-12 лет. Мы создаем среду, где каждый ребенок развивается в своем темпе, с уважением к его личности и свободе выбора.</p>
+                <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Записаться на встречу</a>
+              </div>
+              <div class="hero-image-wrapper">
+                <img src="images/main4.jpg" alt="Дети в Монтессори-классе">
+              </div>
             </div>
         </section>
-
-        <section id="projects" class="projects-section">
+        
+        <section id="philosophy" class="features-section" style="background-color: #FFFFFF;">
             <div class="container">
-                <h2 class="section-title">Наши проекты</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div>
-                            <h3>Монтессори-школа "Искра"</h3>
-                            <p>Наша школа в Нови Саде (Сербия), где дети от 6 до 12 лет растут самостоятельными и уверенными в себе в заботливой Монтессори-среде.</p>
-                        </div>
-                        <a href="#contacts" class="btn btn-secondary">Связаться с нами</a>
-                    </div>
-                    <div class="project-card">
-                        <div>
-                            <h3>Онлайн-проект "BloomKids"</h3>
-                            <p>Ваш персональный гид по развитию ребенка 3-6 лет дома. Готовые планы занятий и сотни идей для совместных активностей, основанных на гуманистической педагогике.</p>
-                        </div>
-                        <a href="bloomkids/" class="btn btn-primary">Перейти на сайт BloomKids</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="philosophy" class="philosophy-section">
-            <div class="container">
-                <h2 class="section-title">Наш подход: Уважение и свобода</h2>
+                <h2 class="section-title">Ключевые принципы метода Монтессори</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fi fi-rr-hand-holding-heart"></i></div>
-                        <h3>Уважение к личности</h3>
-                        <p>Мы не сравниваем детей, а следуем за их индивидуальным темпом развития.</p>
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-user"></i></div>
+                        <h3>Индивидуальный подход</h3>
+                        <p>Учитываем способности, скорость и стиль обучения каждого ребёнка, помогая ему открыть дверь в научное познание мира.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fi fi-rr-star"></i></div>
-                        <h3>Подготовленная среда</h3>
-                        <p>Пространство, где всё доступно, понятно и соответствует потребностям детей.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fi fi-rr-leaf"></i></div>
-                        <h3>Свобода выбора</h3>
-                        <p>Ребенок сам выбирает занятие, что развивает его внутреннюю мотивацию.</p>
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-badge-check"></i></div>
+                        <h3>Без оценок и домашки</h3>
+                        <p>Опираемся на внутреннюю мотивацию к познанию. Практика проходит в классе, освобождая вечера для семьи.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon-wrapper"><i class="fi fi-rr-users-alt"></i></div>
-                        <h3>Поддержка родителей</h3>
-                        <p>Мы верим, что родители — главные эксперты по своему ребенку, и помогаем им.</p>
+                        <h3>Разновозрастной класс</h3>
+                        <p>Дети 6-12 лет учатся вместе, развивая навыки общения. Младшие тянутся за старшими, а старшие становятся наставниками.</p>
+                    </div>
+                     <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fi fi-rr-leaf"></i></div>
+                        <h3>Свобода и ответственность</h3>
+                        <p>Ребенок сам выбирает занятия, что развивает его внутреннюю мотивацию и ответственность за свой выбор.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="program" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Что изучают дети и как устроен день</h2>
+                <div class="tab-content-inner">
+                   <div class="tab-text">
+                      <h3>Широкое и глубокое образование</h3>
+                      <p>Мы создаем целостную картину мира. Ученики изучают:</p>
+                      <ul id="subjects-list" style="list-style: none; padding-left: 0; margin-top: 16px;">
+                        <li><i class="fi fi-rr-check"></i> Русский и сербский языки</li>
+                        <li><i class="fi fi-rr-check"></i> Арифметика и геометрия</li>
+                        <li><i class="fi fi-rr-check"></i> Ботаника и зоология</li>
+                        <li><i class="fi fi-rr-check"></i> География и всемирная история</li>
+                        <li><i class="fi fi-rr-check"></i> Английский язык</li>
+                        <li><i class="fi fi-rr-check"></i> Искусство, творчество и физкультура</li>
+                      </ul>
+                   </div>
+                   <div class="tab-text">
+                      <h3>Наш распорядок дня</h3>
+                      <ul style="list-style: none; padding-left: 0;">
+                        <li><b>8:30-9:00</b> - Встреча детей</li>
+                        <li><b>9:00-12:00</b> - Утренний рабочий цикл</li>
+                        <li><b>12:00-14:00</b> - Обед, прогулка, свободные игры</li>
+                        <li><b>14:00-16:00</b> - Проектная работа, творчество</li>
+                        <li><b>16:00-16:30</b> - Завершение дня, полдник</li>
+                      </ul>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Наши Монтессори-гиды</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/team-nadezhda.jpg" alt="Фото Надежды">
+                            <div><h4>Надежда</h4><span style="font-size:0.9rem; color: #777;">Педагог класса</span></div>
+                        </div>
+                        <p style="font-style:normal;">Учитель-филолог с опытом более 15 лет. Учусь на Монтессори-педагога 6-12.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/team-yulia.jpg" alt="Фото Юлии">
+                            <div><h4>Юлия</h4><span style="font-size:0.9rem; color: #777;">Ассистент класса</span></div>
+                        </div>
+                        <p style="font-style:normal;">Организатор детских квестов и театрального балаганчика. Фонтан творческих идей.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/team-natalia.jpg" alt="Фото Натальи">
+                            <div><h4>Наталья</h4><span style="font-size:0.9rem; color: #777;">Менеджер проекта</span></div>
+                        </div>
+                        <p style="font-style:normal;">Предприниматель, IT-специалист. Люблю математику и хочу подружить с ней детей.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/team-danka.jpg" alt="Фото Данки">
+                            <div><h4>Данка</h4><span style="font-size:0.9rem; color: #777;">Ассистент класса</span></div>
+                        </div>
+                        <p style="font-style:normal;">Преподает сербский язык, а также помогает детям погрузиться в местную среду.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+          <div class="container">
+              <h2 class="section-title">Стоимость обучения</h2>
+              <p class="section-subtitle" style="margin-bottom: var(--spacing-md);">Актуально на 2025-2026 учебный год</p>
+              <div class="pricing-grid">
+                  <div class="pricing-card">
+                      <h3>Полный день</h3>
+                      <p class="price">460€/мес</p>
+                      <p class="plan-age-focus">Ежемесячная оплата без питания</p>
+                      <ul class="features-list">
+                          <li><i class="fi fi-rr-check"></i><div>Программа Монтессори</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Билингвальная среда (рус/серб)</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Все учебные материалы</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Прогулки и экскурсии</div></li>
+                      </ul>
+                      <a href="#contacts" class="btn btn-primary">Выбрать</a>
+                  </div>
+                  <div class="pricing-card">
+                      <h3>Продленка</h3>
+                      <p class="price">230€/мес</p>
+                      <p class="plan-age-focus">Для тех, кто учится в другой школе</p>
+                       <ul class="features-list">
+                          <li><i class="fi fi-rr-check"></i><div>Пребывание в Монтессори-среде</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Помощь с домашними заданиями</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Расширение кругозора</div></li>
+                          <li><i class="fi fi-rr-check"></i><div>Языковая практика</div></li>
+                      </ul>
+                      <a href="#contacts" class="btn btn-secondary">Выбрать</a>
+                  </div>
+              </div>
+              <p class="pricing-footnote">
+                <strong>Первоначальный взнос:</strong> 500€. <strong>Питание:</strong> 100€/мес.<br>
+                Скидка 10% на второго и последующих детей в семье.
+              </p>
+          </div>
+        </section>
+        
+        <section id="contacts" class="cta-section">
+            <div class="container cta-container">
+              <div class="cta-content">
+                <h2 class="section-title">Приходите знакомиться!</h2>
+                <p>Мы находимся в Нови Саде по адресу: Лазе Нанчића 23. Свяжитесь с нами, чтобы задать вопросы или договориться о встрече.</p>
+                 <div style="display: flex; justify-content: center; align-items: center; gap: var(--spacing-lg); margin-top: 16px;">
+                    <a href="https://t.me/fruiskra" target="_blank" class="btn btn-primary" style="background-color: #27A7E7; border-color: #27A7E7;"><i class="fi fi-brands-telegram" style="margin-right: 8px;"></i> Телеграм</a>
+                    <a href="https://www.instagram.com/frushka_iskra/" target="_blank" class="btn btn-primary" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); border: none;"><i class="fi fi-brands-instagram" style="margin-right: 8px;"></i> Instagram</a>
+                  </div>
+              </div>
+              <div class="cta-image-desktop">
+                <img src="images/main5.jpg" alt="Здание школы Фрушка Искра">
+              </div>
             </div>
         </section>
     </main>
     
-    <footer id="contacts" class="main-footer">
-      <div class="container footer-container">
-          <h2 class="section-title">Контакты</h2>
-          <p>Свяжитесь с нами, чтобы узнать больше о Монтессори-школе "Искра" или задать любой вопрос.</p>
-          <div class="social-icons">
-            <a href="https://t.me/natalia_frushkaiskra" target="_blank"><i class="fi fi-brands-telegram"></i></a>
-            <a href="https://www.instagram.com/frushka_iskra/" target="_blank"><i class="fi fi-brands-instagram"></i></a>
-          </div>
-          <p style="margin-top: 32px; font-size: 0.9rem;">© 2024 Фрушка Искра</p>
-      </div>
+    <footer class="main-footer" style="padding-top: 0;">
+         <div class="footer-bottom" style="border-top: none;">
+            <p>© 2024 Фрушка Искра. Все права защищены.</p>
+         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var mainNav = document.querySelector('.main-nav');
+            
+            if (menuToggle && mainNav) {
+                var mobileNavClone = mainNav.cloneNode(true);
+                mobileNavClone.classList.add('main-nav-mobile');
+                mobileNavClone.classList.remove('main-nav');
+                document.body.appendChild(mobileNavClone);
+        
+                menuToggle.addEventListener('click', function() {
+                    mobileNavClone.classList.toggle('active');
+                    var icon = menuToggle.querySelector('i');
+                    if (mobileNavClone.classList.contains('active')) {
+                        icon.className = 'fi fi-rr-cross';
+                    } else {
+                        icon.className = 'fi fi-rr-menu-burger';
+                    }
+                });
+        
+                mobileNavClone.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        if (!e.target.hasAttribute('target')) {
+                             mobileNavClone.classList.remove('active');
+                             menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
