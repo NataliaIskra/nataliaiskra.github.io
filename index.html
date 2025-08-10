@@ -165,12 +165,17 @@
         .testimonial-card {
             background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .testimonial-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-        .testimonial-header { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
-        .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--color-white); object-fit: cover; }
+        .testimonial-header { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+        .testimonial-header img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--color-white); object-fit: cover; box-shadow: var(--shadow); }
+        .testimonial-header div { text-align: center; }
         .testimonial-header h4 { font-family: var(--font-primary); font-size: 1.2rem; color: var(--color-text); line-height: 1.3; }
-        .testimonial-card p { font-style: italic; color: #555; }
+        .testimonial-card p { font-style: normal; color: #555; }
         
         .cta-section { padding: var(--spacing-xl) 0; }
         .cta-container {
@@ -230,6 +235,7 @@
         
         @media (min-width: 992px) {
             .features-grid { grid-template-columns: repeat(4, 1fr); }
+            .testimonial-header { flex-direction: column; }
         }
 
         .main-nav-mobile {
@@ -268,7 +274,7 @@
             <div class="container hero-container">
               <div class="hero-content">
                 <h1 class="hero-title">Фрушка Искра: Монтессори-школа в Нови-Саде</h1>
-                <p class="hero-subtitle">Первая в Сербии школа педагогики Монтессори для детей 6-12 лет. Мы создаем среду, где каждый ребенок развивается в своем темпе, с уважением к его личности и свободе выбора.</p>
+                <p class="hero-subtitle">Первая в Сербии Монтессори школа для детей 6-12 лет. Мы создаем среду, где каждый ребенок развивается в своем темпе, с уважением к его личности и свободе выбора.</p>
                 <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Записаться на встречу</a>
               </div>
               <div class="hero-image-wrapper">
@@ -284,7 +290,7 @@
                     <div class="feature-card">
                         <div class="feature-icon-wrapper"><i class="fi fi-rr-user"></i></div>
                         <h3>Индивидуальный подход</h3>
-                        <p>Учитываем способности, скорость и стиль обучения каждого ребёнка, помогая ему открыть дверь в научное познание мира.</p>
+                        <p>Учитываем способности, скорость и стиль обучения каждого ребёнка, помогая ему открыть дверь в научный мир.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon-wrapper"><i class="fi fi-rr-badge-check"></i></div>
@@ -313,11 +319,10 @@
                       <h3>Широкое и глубокое образование</h3>
                       <p>Мы создаем целостную картину мира. Ученики изучают:</p>
                       <ul id="subjects-list" style="list-style: none; padding-left: 0; margin-top: 16px;">
-                        <li><i class="fi fi-rr-check"></i> Русский и сербский языки</li>
+                        <li><i class="fi fi-rr-check"></i> Русский, английский, сербский языки</li>
                         <li><i class="fi fi-rr-check"></i> Арифметика и геометрия</li>
                         <li><i class="fi fi-rr-check"></i> Ботаника и зоология</li>
                         <li><i class="fi fi-rr-check"></i> География и всемирная история</li>
-                        <li><i class="fi fi-rr-check"></i> Английский язык</li>
                         <li><i class="fi fi-rr-check"></i> Искусство, творчество и физкультура</li>
                       </ul>
                    </div>
@@ -341,31 +346,31 @@
                 <div class="testimonials-grid">
                     <article class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="images/team-nadezhda.jpg" alt="Фото Надежды">
-                            <div><h4>Надежда</h4><span style="font-size:0.9rem; color: #777;">Педагог класса</span></div>
+                            <img src="images/Nadya.jpg" alt="Фото Надежды">
+                            <div><h4>Надежда</h4><span style="font-size:0.9rem; color: #777;">Главный педагог и методолог</span></div>
                         </div>
-                        <p style="font-style:normal;">Учитель-филолог с опытом более 15 лет. Учусь на Монтессори-педагога 6-12.</p>
+                        <p>Учитель-филолог с 15-летним опытом и Монтессори-педагог. Видит своей миссией сделать гуманистическое образование доступным для каждого.</p>
                     </article>
                     <article class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="images/team-yulia.jpg" alt="Фото Юлии">
-                            <div><h4>Юлия</h4><span style="font-size:0.9rem; color: #777;">Ассистент класса</span></div>
-                        </div>
-                        <p style="font-style:normal;">Организатор детских квестов и театрального балаганчика. Фонтан творческих идей.</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="images/team-natalia.jpg" alt="Фото Натальи">
+                            <img src="images/Natalia.jpg" alt="Фото Натальи">
                             <div><h4>Наталья</h4><span style="font-size:0.9rem; color: #777;">Менеджер проекта</span></div>
                         </div>
-                        <p style="font-style:normal;">Предприниматель, IT-специалист. Люблю математику и хочу подружить с ней детей.</p>
+                        <p>Любит математику и хочет подружить с ней детей. А также дать возможность детям развить в себе предпринимательские навыки.</p>
                     </article>
                     <article class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="images/team-danka.jpg" alt="Фото Данки">
+                            <img src="images/Julia.jpg" alt="Фото Юлии">
+                            <div><h4>Юлия</h4><span style="font-size:0.9rem; color: #777;">Ассистент класса</span></div>
+                        </div>
+                        <p>Организатор семейных праздников, походов на природу и театрального балаганчика.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/Danka.jpg" alt="Фото Данки">
                             <div><h4>Данка</h4><span style="font-size:0.9rem; color: #777;">Ассистент класса</span></div>
                         </div>
-                        <p style="font-style:normal;">Преподает сербский язык, а также помогает детям погрузиться в местную среду.</p>
+                        <p>Носитель сербского языка. Помогает детям освоить язык и легко погрузиться в местную культуру.</p>
                     </article>
                 </div>
             </div>
