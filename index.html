@@ -210,7 +210,11 @@
         }
         .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
         .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
-        .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); }
+        .price { 
+          font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm);
+          display: flex; align-items: baseline; justify-content: center; gap: 12px; 
+        }
+        .price small { font-size: 1.2rem; color: var(--color-text); font-weight: 500; }
         .plan-age-focus { font-size: 0.9rem; color: #777; margin-bottom: var(--spacing-md); }
         .pricing-card .features-list { list-style: none; margin-bottom: var(--spacing-lg); text-align: left; flex-grow: 1; padding: 0;}
         .pricing-card .features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: var(--spacing-sm); }
@@ -220,6 +224,36 @@
             margin-top: var(--spacing-lg);
             line-height: 1.7;
         }
+
+        /* --- СТИЛИ ДЛЯ АКЦИИ --- */
+        .pricing-card.promo {
+            border: 2px solid var(--color-primary);
+            position: relative;
+        }
+        .promo-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-secondary);
+            color: var(--color-white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .price .old-price {
+            font-size: 1.6rem;
+            text-decoration: line-through;
+            color: #aaa;
+            font-weight: normal;
+        }
+        .pricing-footnote .old-price {
+             text-decoration: line-through;
+             color: #999;
+             font-weight: normal;
+        }
+        /* --- КОНЕЦ СТИЛЕЙ ДЛЯ АКЦИИ --- */
         
         .main-footer { background: var(--color-light-gray); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
         .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
@@ -400,14 +434,19 @@
             </div>
         </section>
 
+        <!-- ===== НАЧАЛО ИЗМЕНЕННОГО РАЗДЕЛА ЦЕН ===== -->
         <section id="pricing" class="pricing-section">
           <div class="container">
               <h2 class="section-title">Стоимость обучения</h2>
               <p class="section-subtitle" style="margin-bottom: var(--spacing-md);">Актуально на 2025-2026 учебный год</p>
               <div class="pricing-grid">
-                  <div class="pricing-card">
+                  <div class="pricing-card promo">
+                      <div class="promo-badge">АКЦИЯ</div>
                       <h3>Полный день</h3>
-                      <p class="price">460€/мес</p>
+                      <div class="price">
+                        <span>420€<small>/мес</small></span>
+                        <span class="old-price">460€</span>
+                      </div>
                       <p class="plan-age-focus">Ежемесячная оплата без питания</p>
                       <ul class="features-list">
                           <li><i class="fi fi-rr-check"></i><div>Программа Монтессори</div></li>
@@ -431,11 +470,13 @@
                   </div>
               </div>
               <p class="pricing-footnote">
-                <strong>Первоначальный взнос:</strong> 500€. <strong>Питание:</strong> 100€/мес.<br>
+                <strong>Первоначальный взнос:</strong> <span class="old-price">500€</span> <strong style="color: var(--color-primary);">300€</strong>. 
+                <strong>Питание:</strong> 100€/мес.<br>
                 Скидка 10% на второго и последующих детей в семье.
               </p>
           </div>
         </section>
+        <!-- ===== КОНЕЦ ИЗМЕНЕННОГО РАЗДЕЛА ЦЕН ===== -->
         
         <section id="contacts" class="cta-section">
             <div class="container cta-container">
