@@ -95,7 +95,8 @@
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .main-nav { display: none; }
         .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
-        .main-nav a:hover { color: var(--color-primary); }
+        /* ИСПРАВЛЕНИЕ: ховер работает только на обычные ссылки, но не на кнопки */
+        .main-nav a:not(.btn):hover { color: var(--color-primary); }
         
         .header-right { display: flex; align-items: center; gap: var(--spacing-md); }
         .menu-toggle-btn {
@@ -223,7 +224,8 @@
           <a href="#format">О формате</a>
           <a href="#audience">Для кого</a>
           <a href="#process">Как проходит</a>
-          <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 20px;">На главную</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary" style="padding: 8px 16px; margin-left: 20px;">Записаться на игру</a>
+          <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 12px;">На главную</a>
         </nav>
         <div class="header-right">
             <button id="menu-toggle" class="menu-toggle-btn">
