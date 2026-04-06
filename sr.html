@@ -28,15 +28,12 @@
           --color-white: #FFFFFF;
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
-        
           --font-primary: 'Merriweather', serif;
           --font-secondary: 'Nunito Sans', sans-serif;
-          
           --spacing-sm: 8px;
           --spacing-md: 16px;
           --spacing-lg: 32px;
           --spacing-xl: 64px;
-          
           --border-radius-soft: 20px;
           --border-radius-sharp: 12px;
           --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
@@ -44,105 +41,41 @@
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-          font-family: var(--font-secondary);
-          background-color: var(--color-background);
-          color: var(--color-text);
-          line-height: 1.6;
-          font-size: 16px;
-        }
+        body { font-family: var(--font-secondary); background-color: var(--color-background); color: var(--color-text); line-height: 1.6; font-size: 16px; }
         .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
         .logo img { height: 48px; width: auto; }
-        .section-title {
-          font-family: var(--font-primary);
-          color: var(--color-secondary);
-          font-size: 2.2rem;
-          text-align: center;
-          margin-bottom: var(--spacing-md);
-          line-height: 1.2;
-        }
-        .section-subtitle {
-          text-align: center;
-          max-width: 650px;
-          margin: 0 auto var(--spacing-lg);
-          font-size: 1.1rem;
-          color: #6e6e6e;
-        }
-        .btn {
-          display: inline-block;
-          padding: 12px 28px;
-          border-radius: 50px;
-          font-weight: bold;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-          border: none;
-        }
+        .section-title { font-family: var(--font-primary); color: var(--color-secondary); font-size: 2.2rem; text-align: center; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        .section-subtitle { text-align: center; max-width: 650px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem; color: #6e6e6e; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: none; }
         .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
         .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
         
-        .main-header {
-          padding: var(--spacing-md) 0;
-          position: sticky;
-          top: 0;
-          background-color: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          z-index: 100;
-          border-bottom: 1px solid var(--color-border);
-        }
+        .main-header { padding: var(--spacing-md) 0; position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--color-border); }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .main-nav { display: none; }
         .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
         .main-nav a:hover { color: var(--color-primary); }
-        
         .header-right { display: flex; align-items: center; gap: var(--spacing-md); }
         .lang-switcher { display: flex; gap: var(--spacing-sm); }
-        .lang-switcher a {
-            font-size: 0.9rem; font-weight: bold; padding: 6px 12px; border: 1px solid var(--color-border);
-            border-radius: var(--border-radius-sharp); transition: all 0.3s ease;
-        }
-        .lang-switcher a.active, .lang-switcher a:hover {
-            background-color: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary);
-        }
-
-        .menu-toggle-btn {
-          background: none; border: none; font-size: 1.5rem; color: var(--color-secondary);
-          cursor: pointer; display: block;
-        }
+        .lang-switcher a { font-size: 0.9rem; font-weight: bold; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--border-radius-sharp); transition: all 0.3s ease; }
+        .lang-switcher a.active, .lang-switcher a:hover { background-color: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary); }
+        .menu-toggle-btn { background: none; border: none; font-size: 1.5rem; color: var(--color-secondary); cursor: pointer; display: block; }
 
         .hero-section { background-color: var(--color-light-gray); padding: var(--spacing-lg) 0 var(--spacing-xl); }
-        .hero-container {
-          display: flex; flex-direction: column; align-items: center; text-align: center;
-        }
+        .hero-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .hero-content { margin-bottom: var(--spacing-lg); }
-        .hero-title {
-          font-family: var(--font-primary);
-          font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem);
-          line-height: 1.2;
-          margin-bottom: var(--spacing-md);
-          overflow-wrap: break-word;
-          text-wrap: balance;
-        }
+        .hero-title { font-family: var(--font-primary); font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem); line-height: 1.2; margin-bottom: var(--spacing-md); overflow-wrap: break-word; text-wrap: balance; }
         .hero-subtitle { font-size: 1.1rem; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
         .hero-image-wrapper img { border-radius: var(--border-radius-soft); box-shadow: var(--shadow); object-fit: cover; width: 100%; height: 100%; }
         
         .features-section { padding: var(--spacing-xl) 0; }
         .features-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
-        .feature-card {
-          background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center;
-          border: 1px solid var(--color-border);
-          transition: transform 0.3s, box-shadow 0.3s;
-        }
+        .feature-card { background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-        .feature-icon-wrapper {
-          width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%;
-          background-color: var(--color-light-gray); display: flex; align-items: center;
-          justify-content: center; font-size: 1.8rem; color: var(--color-secondary);
-        }
+        .feature-icon-wrapper { width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%; background-color: var(--color-light-gray); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-secondary); }
         .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); color: var(--color-secondary); }
 
         .about-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
@@ -155,14 +88,7 @@
         
         .testimonials-section { padding: var(--spacing-xl) 0; }
         .testimonials-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
-        .testimonial-card {
-            background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+        .testimonial-card { background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center; }
         .testimonial-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
         .testimonial-header { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
         .testimonial-header img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--color-white); object-fit: cover; box-shadow: var(--shadow); }
@@ -171,10 +97,7 @@
         .testimonial-card p { font-style: normal; color: #555; }
         
         .cta-section { padding: var(--spacing-xl) 0; }
-        .cta-container {
-          display: flex; flex-direction: column; background-color: var(--color-light-gray);
-          padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border);
-        }
+        .cta-container { display: flex; flex-direction: column; background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border); }
         .cta-content { flex: 1; text-align: center; }
         .cta-content .section-title { text-align: center; }
         .cta-content p { max-width: 500px; margin: 0 auto var(--spacing-lg); }
@@ -182,56 +105,29 @@
         
         .pricing-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
         .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
-        .pricing-card {
-            background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg);
-            text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s;
-            display: flex; flex-direction: column;
-        }
+        .pricing-card { background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
         .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
         .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
         .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); }
         .plan-age-focus { font-size: 0.9rem; color: #777; margin-bottom: var(--spacing-md); }
-        .pricing-card .features-list { list-style: none; margin-bottom: var(--spacing-lg); text-align: left; flex-grow: 1; padding: 0;}
+        .pricing-card .features-list { list-style: none; margin-bottom: var(--spacing-lg); text-align: left; flex-grow: 1; padding: 0; }
         .pricing-card .features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: var(--spacing-sm); }
         .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; margin-top: 3px; }
-        .pricing-footnote {
-            text-align: center;
-            margin-top: var(--spacing-lg);
-            line-height: 1.7;
-        }
+        .pricing-footnote { text-align: center; margin-top: var(--spacing-lg); line-height: 1.7; }
 
+        /* Футер */
         .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
-        .footer-docs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            padding: 28px 24px 20px;
-        }
-        .footer-doc-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 18px;
-            border: 1px solid var(--color-border);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--color-text);
-            background: var(--color-white);
-            transition: all 0.2s ease;
-        }
-        .footer-doc-link:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-            background: #fff8ec;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding: var(--spacing-md);
-            border-top: 1px solid var(--color-border);
-            font-size: 0.9rem;
-        }
-        
+        .footer-container { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) 0; }
+        .footer-about { display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-md); }
+        .footer-about p { font-size: 0.95rem; color: #6e6e6e; }
+        .footer-col { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-col h4 { font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm); font-size: 1rem; }
+        .footer-col a { font-size: 0.9rem; color: var(--color-text); }
+        .footer-col a:hover { color: var(--color-primary); }
+        .footer-col p { font-size: 0.9rem; color: #6e6e6e; }
+        .footer-col .footer-highlight { color: var(--color-primary); font-weight: 600; }
+        .footer-bottom { text-align: center; padding: var(--spacing-md); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
           .main-nav { display: flex; align-items: center; }
@@ -244,30 +140,22 @@
           .hero-image-wrapper { flex: 1; }
           .features-grid { grid-template-columns: repeat(2, 1fr); }
           .about-section .tab-content-inner { grid-template-columns: 1fr 1fr; }
-          .testimonials-grid { 
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 820px;
-            margin-left: auto;
-            margin-right: auto;
-          }
+          .testimonials-grid { grid-template-columns: repeat(2, 1fr); max-width: 820px; margin-left: auto; margin-right: auto; }
           .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 800px; margin: 0 auto; }
           .cta-container { flex-direction: row; align-items: center; gap: var(--spacing-xl); padding: var(--spacing-xl); }
           .cta-content { text-align: left; }
           .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
           .cta-image-desktop { display: block; flex-shrink: 0; flex: 0 0 40%; }
-          .cta-image-desktop img { border-radius: var(--border-radius-soft); object-fit: cover; width: 100%; height: 100%;}
+          .cta-image-desktop img { border-radius: var(--border-radius-soft); object-fit: cover; width: 100%; height: 100%; }
+          .footer-container { grid-template-columns: 2fr 1fr 1fr; padding: var(--spacing-xl) 0 var(--spacing-lg); }
         }
         
         @media (min-width: 992px) {
-            .features-grid { grid-template-columns: repeat(4, 1fr); }
-            .testimonial-header { flex-direction: column; }
+          .features-grid { grid-template-columns: repeat(4, 1fr); }
+          .testimonial-header { flex-direction: column; }
         }
 
-        .main-nav-mobile {
-          display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg);
-          position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background);
-          transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99;
-        }
+        .main-nav-mobile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background); transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99; }
         .main-nav-mobile.active { transform: translateX(0); }
         .main-nav-mobile a { font-size: 1.5rem; font-weight: bold; color: var(--color-secondary); }
     </style>
@@ -463,48 +351,50 @@
     </main>
     
     <footer class="main-footer">
-        <div class="footer-docs">
-            <a href="Docs/FI_SR_Javna_ponuda.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-document"></i> Javna ponuda
-            </a>
-            <a href="Docs/FI_SR_Politika_privatnosti.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-shield-check"></i> Politika privatnosti
-            </a>
-            <a href="Docs/FI_SR_Cookie_Policy.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-cookie"></i> Politika kolačića
-            </a>
+      <div class="container footer-container">
+        <div class="footer-about">
+          <a href="/" class="logo" style="flex-shrink: 0;"><img src="images/logo.svg" alt="Fruška Iskra Logo"></a>
+          <p>Montesori škola «Iskra» u Novom Sadu za decu uzrasta 6–12 godina. Stvaramo okruženje gde se svako dete razvija sopstvenim tempom, uz poštovanje njegove ličnosti i slobode izbora.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2024 Fruška Iskra. Sva prava zadržana.</p>
+        <div class="footer-col">
+          <h4>Kontakti</h4>
+          <p>Novi Sad, Laze Nančića 23</p>
+          <a href="https://t.me/fruiskra" target="_blank">Naš Telegram kanal</a>
+          <a href="https://www.instagram.com/frushka_iskra/" target="_blank">Naš Instagram</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-highlight">@natalia_frushkaiskra</a>
         </div>
+        <div class="footer-col">
+          <h4>Dokumenta</h4>
+          <a href="Docs/FI_SR_Javna_ponuda.pdf" target="_blank">Javna ponuda</a>
+          <a href="Docs/FI_SR_Politika_privatnosti.pdf" target="_blank">Politika privatnosti</a>
+          <a href="Docs/FI_SR_Cookie_Policy.pdf" target="_blank">Politika kolačića</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Fruška Iskra. Sva prava zadržana.</p>
+      </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var menuToggle = document.getElementById('menu-toggle');
             var mainNav = document.querySelector('.main-nav');
-            
             if (menuToggle && mainNav) {
                 var mobileNavClone = mainNav.cloneNode(true);
                 mobileNavClone.classList.add('main-nav-mobile');
                 mobileNavClone.classList.remove('main-nav');
                 document.body.appendChild(mobileNavClone);
-        
                 menuToggle.addEventListener('click', function() {
                     mobileNavClone.classList.toggle('active');
                     var icon = menuToggle.querySelector('i');
-                    if (mobileNavClone.classList.contains('active')) {
-                        icon.className = 'fi fi-rr-cross';
-                    } else {
-                        icon.className = 'fi fi-rr-menu-burger';
-                    }
+                    if (mobileNavClone.classList.contains('active')) { icon.className = 'fi fi-rr-cross'; }
+                    else { icon.className = 'fi fi-rr-menu-burger'; }
                 });
-        
                 mobileNavClone.addEventListener('click', function(e) {
                     if (e.target.tagName === 'A') {
                         if (!e.target.hasAttribute('target')) {
-                             mobileNavClone.classList.remove('active');
-                             menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
+                            mobileNavClone.classList.remove('active');
+                            menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
                         }
                     }
                 });
