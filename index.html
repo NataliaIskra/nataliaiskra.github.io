@@ -11,13 +11,11 @@
     <link rel="alternate" hreflang="sr" href="https://iskramontessori.com/sr.html" />
     <link rel="alternate" hreflang="x-default" href="https://iskramontessori.com/index.html" />
     
-    <!-- Полный набор Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Иконки -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
 
@@ -38,7 +36,6 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/103263687" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     
-    <!-- Стили -->
     <style>
         :root {
           --color-primary: #D4A01D;
@@ -49,9 +46,8 @@
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
         
-          /* Рекомендую выбрать и подключить шрифты, например, с Google Fonts */
-          --font-primary: 'Merriweather', serif; /* Пример элегантного шрифта для заголовков */
-          --font-secondary: 'Nunito Sans', sans-serif; /* Пример чистого шрифта для текста */
+          --font-primary: 'Merriweather', serif;
+          --font-secondary: 'Nunito Sans', sans-serif;
           
           --spacing-sm: 8px;
           --spacing-md: 16px;
@@ -225,7 +221,6 @@
             line-height: 1.7;
         }
 
-        /* --- СТИЛИ ДЛЯ АКЦИИ --- */
         .pricing-card.promo {
             border: 2px solid var(--color-primary);
             position: relative;
@@ -253,10 +248,38 @@
              color: #999;
              font-weight: normal;
         }
-        /* --- КОНЕЦ СТИЛЕЙ ДЛЯ АКЦИИ --- */
         
-        .main-footer { background: var(--color-light-gray); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
-        .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+        .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
+        .footer-docs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 28px 24px 20px;
+        }
+        .footer-doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border: 1px solid var(--color-border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--color-text);
+            background: var(--color-white);
+            transition: all 0.2s ease;
+        }
+        .footer-doc-link:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            background: #fff8ec;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+            font-size: 0.9rem;
+        }
         
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
@@ -435,7 +458,6 @@
             </div>
         </section>
 
-        <!-- ===== НАЧАЛО ИЗМЕНЕННОГО РАЗДЕЛА ЦЕН ===== -->
         <section id="pricing" class="pricing-section">
           <div class="container">
               <h2 class="section-title">Стоимость обучения</h2>
@@ -477,7 +499,6 @@
               </p>
           </div>
         </section>
-        <!-- ===== КОНЕЦ ИЗМЕНЕННОГО РАЗДЕЛА ЦЕН ===== -->
         
         <section id="contacts" class="cta-section">
             <div class="container cta-container">
@@ -496,10 +517,21 @@
         </section>
     </main>
     
-    <footer class="main-footer" style="padding-top: 0;">
-         <div class="footer-bottom" style="border-top: none;">
-            <p>© 2024 Фрушка Искра. Все права защищены.</p>
-         </div>
+    <footer class="main-footer">
+        <div class="footer-docs">
+            <a href="docs/FI_RU_Publichnaya_oferta.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-document"></i> Публичная оферта
+            </a>
+            <a href="docs/FI_RU_Politika_konfidentsialnosti.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-shield-check"></i> Политика конфиденциальности
+            </a>
+            <a href="docs/FI_RU_Cookie_Policy.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-cookie"></i> Политика Cookie
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024-2026 Фрушка Искра. Все права защищены.</p>
+        </div>
     </footer>
 
     <script>
