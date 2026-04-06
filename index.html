@@ -517,22 +517,30 @@
         </section>
     </main>
     
-    <footer class="main-footer">
-        <div class="footer-docs">
-            <a href="Docs/FI_RU_Publichnaya_oferta.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-document"></i> Публичная оферта
-            </a>
-            <a href="Docs/FI_RU_Politika_konfidentsialnosti.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-shield-check"></i> Политика конфиденциальности
-            </a>
-            <a href="Docs/FI_RU_Cookie_Policy.pdf" target="_blank" class="footer-doc-link">
-                <i class="fi fi-rr-cookie"></i> Политика Cookie
-            </a>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024-2026 Фрушка Искра. Все права защищены.</p>
-        </div>
-    </footer>
+<footer class="main-footer">
+  <div class="container footer-container" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--spacing-lg); padding: var(--spacing-xl) 0 var(--spacing-lg);">
+    <div class="footer-about" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+      <a href="/" class="logo"><img src="images/logo.svg" alt="Логотип Фрушка Искра"></a>
+      <p style="font-size: 0.95rem; color: #6e6e6e; max-width: 320px;">Монтессори-школа «Искра» в Нови-Саде для детей 6–12 лет. Создаём среду, где каждый ребёнок развивается в своём темпе — с уважением к его личности и свободе выбора.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+      <h4 style="font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm);">Контакты</h4>
+      <p style="font-size: 0.9rem; color: #6e6e6e;">Нови Сад, Лазе Нанчића 23</p>
+      <a href="https://t.me/fruiskra" target="_blank" style="font-size: 0.9rem; color: var(--color-text);">Наш канал в Телеграм</a>
+      <a href="https://www.instagram.com/frushka_iskra/" target="_blank" style="font-size: 0.9rem; color: var(--color-text);">Наш Instagram</a>
+      <a href="https://t.me/natalia_frushkaiskra" target="_blank" style="font-size: 0.9rem; color: var(--color-primary); font-weight: 600;">@natalia_frushkaiskra</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+      <h4 style="font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm);">Документы</h4>
+      <a href="Docs/FI_RU_Publichnaya_oferta.pdf" target="_blank" style="font-size: 0.9rem; color: var(--color-text);">Публичная оферта</a>
+      <a href="Docs/FI_RU_Politika_konfidentsialnosti.pdf" target="_blank" style="font-size: 0.9rem; color: var(--color-text);">Политика конфиденциальности</a>
+      <a href="Docs/FI_RU_Cookie_Policy.pdf" target="_blank" style="font-size: 0.9rem; color: var(--color-text);">Политика Cookie</a>
+    </div>
+  </div>
+  <div class="footer-bottom" style="text-align: center; padding: var(--spacing-md); border-top: 1px solid var(--color-border); font-size: 0.9rem;">
+    <p>© 2024 Фрушка Искра. Все права защищены.</p>
+  </div>
+</footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
