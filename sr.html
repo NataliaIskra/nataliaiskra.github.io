@@ -11,17 +11,14 @@
     <link rel="alternate" hreflang="en" href="https://iskramontessori.com/en.html" />
     <link rel="alternate" hreflang="x-default" href="https://iskramontessori.com/index.html" />
     
-    <!-- Полный набор Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Иконки -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
     
-    <!-- Стили -->
     <style>
         :root {
           --color-primary: #D4A01D;
@@ -32,9 +29,8 @@
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
         
-          /* Рекомендую выбрать и подключить шрифты, например, с Google Fonts */
-          --font-primary: 'Merriweather', serif; /* Пример элегантного шрифта для заголовков */
-          --font-secondary: 'Nunito Sans', sans-serif; /* Пример чистого шрифта для текста */
+          --font-primary: 'Merriweather', serif;
+          --font-secondary: 'Nunito Sans', sans-serif;
           
           --spacing-sm: 8px;
           --spacing-md: 16px;
@@ -203,9 +199,38 @@
             margin-top: var(--spacing-lg);
             line-height: 1.7;
         }
-        
-        .main-footer { background: var(--color-light-gray); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
-        .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+
+        .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
+        .footer-docs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 28px 24px 20px;
+        }
+        .footer-doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border: 1px solid var(--color-border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--color-text);
+            background: var(--color-white);
+            transition: all 0.2s ease;
+        }
+        .footer-doc-link:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            background: #fff8ec;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+            font-size: 0.9rem;
+        }
         
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
@@ -437,10 +462,21 @@
         </section>
     </main>
     
-    <footer class="main-footer" style="padding-top: 0;">
-         <div class="footer-bottom" style="border-top: none;">
+    <footer class="main-footer">
+        <div class="footer-docs">
+            <a href="Docs/FI_SR_Javna_ponuda.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-document"></i> Javna ponuda
+            </a>
+            <a href="Docs/FI_SR_Politika_privatnosti.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-shield-check"></i> Politika privatnosti
+            </a>
+            <a href="Docs/FI_SR_Cookie_Policy.pdf" target="_blank" class="footer-doc-link">
+                <i class="fi fi-rr-cookie"></i> Politika kolačića
+            </a>
+        </div>
+        <div class="footer-bottom">
             <p>© 2024 Fruška Iskra. Sva prava zadržana.</p>
-         </div>
+        </div>
     </footer>
 
     <script>
