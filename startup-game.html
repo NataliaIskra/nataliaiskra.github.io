@@ -6,17 +6,14 @@
     <title>Стартап-игра для подростков | Фрушка Искра</title>
     <meta name="description" content="Онлайн-встреча для подростков 10-14 лет, где можно попробовать себя в роли создателя идеи стартапа или бизнеса.">
    
-    <!-- Полный набор Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Иконки -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
 
-    <!-- Стили -->
     <style>
         :root {
           --color-primary: #D4A01D;
@@ -26,15 +23,12 @@
           --color-white: #FFFFFF;
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
-        
-          --font-primary: 'Merriweather', serif; 
-          --font-secondary: 'Nunito Sans', sans-serif; 
-          
+          --font-primary: 'Merriweather', serif;
+          --font-secondary: 'Nunito Sans', sans-serif;
           --spacing-sm: 8px;
           --spacing-md: 16px;
           --spacing-lg: 32px;
           --spacing-xl: 64px;
-          
           --border-radius-soft: 20px;
           --border-radius-sharp: 12px;
           --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
@@ -42,98 +36,41 @@
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-          font-family: var(--font-secondary);
-          background-color: var(--color-background);
-          color: var(--color-text);
-          line-height: 1.6;
-          font-size: 16px;
-        }
+        body { font-family: var(--font-secondary); background-color: var(--color-background); color: var(--color-text); line-height: 1.6; font-size: 16px; }
         .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
         .logo img { height: 48px; width: auto; }
-        .section-title {
-          font-family: var(--font-primary);
-          color: var(--color-secondary);
-          font-size: 2.2rem;
-          text-align: center;
-          margin-bottom: var(--spacing-md);
-          line-height: 1.2;
-        }
-        .section-subtitle {
-          text-align: center;
-          max-width: 650px;
-          margin: 0 auto var(--spacing-lg);
-          font-size: 1.1rem;
-          color: #6e6e6e;
-        }
-        .btn {
-          display: inline-block;
-          padding: 12px 28px;
-          border-radius: 50px;
-          font-weight: bold;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-          border: none;
-        }
+        .section-title { font-family: var(--font-primary); color: var(--color-secondary); font-size: 2.2rem; text-align: center; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        .section-subtitle { text-align: center; max-width: 650px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem; color: #6e6e6e; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: none; }
         .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
         .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
         
-        .main-header {
-          padding: var(--spacing-md) 0;
-          position: sticky;
-          top: 0;
-          background-color: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          z-index: 100;
-          border-bottom: 1px solid var(--color-border);
-        }
+        .main-header { padding: var(--spacing-md) 0; position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--color-border); }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .main-nav { display: none; }
         .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
-        /* ИСПРАВЛЕНИЕ: ховер работает только на обычные ссылки, но не на кнопки */
         .main-nav a:not(.btn):hover { color: var(--color-primary); }
-        
         .header-right { display: flex; align-items: center; gap: var(--spacing-md); }
-        .menu-toggle-btn {
-          background: none; border: none; font-size: 1.5rem; color: var(--color-secondary);
-          cursor: pointer; display: block;
-        }
+        .lang-switcher { display: flex; gap: var(--spacing-sm); }
+        .lang-switcher a { font-size: 0.9rem; font-weight: bold; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--border-radius-sharp); transition: all 0.3s ease; }
+        .lang-switcher a.active, .lang-switcher a:hover { background-color: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary); }
+        .menu-toggle-btn { background: none; border: none; font-size: 1.5rem; color: var(--color-secondary); cursor: pointer; display: block; }
 
         .hero-section { background-color: var(--color-light-gray); padding: var(--spacing-lg) 0 var(--spacing-xl); }
-        .hero-container {
-          display: flex; flex-direction: column; align-items: center; text-align: center;
-        }
+        .hero-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .hero-content { margin-bottom: var(--spacing-lg); }
-        .hero-title {
-          font-family: var(--font-primary);
-          font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem);
-          line-height: 1.2;
-          margin-bottom: var(--spacing-md);
-          overflow-wrap: break-word;
-          text-wrap: balance;
-        }
+        .hero-title { font-family: var(--font-primary); font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem); line-height: 1.2; margin-bottom: var(--spacing-md); overflow-wrap: break-word; text-wrap: balance; }
         .hero-subtitle { font-size: 1.1rem; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
         .hero-image-wrapper img { border-radius: var(--border-radius-soft); box-shadow: var(--shadow); object-fit: cover; width: 100%; height: 100%; }
         
         .features-section { padding: var(--spacing-xl) 0; }
         .features-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
-        .feature-card {
-          background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center;
-          border: 1px solid var(--color-border);
-          transition: transform 0.3s, box-shadow 0.3s;
-          display: flex; flex-direction: column; align-items: center;
-        }
+        .feature-card { background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-        .feature-icon-wrapper {
-          width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%;
-          background-color: var(--color-light-gray); display: flex; align-items: center;
-          justify-content: center; font-size: 1.8rem; color: var(--color-secondary);
-        }
+        .feature-icon-wrapper { width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%; background-color: var(--color-light-gray); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-secondary); }
         .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); color: var(--color-secondary); }
 
         .about-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
@@ -141,73 +78,56 @@
         .about-section .tab-text { background-color: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); height: 100%; border: 1px solid var(--color-border); }
         .about-section .tab-text h3 { color: var(--color-secondary); font-family: var(--font-primary); font-size: 1.8rem; margin-bottom: var(--spacing-sm); }
         .about-section .tab-text ul li { display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-md); }
-        .about-section .tab-text ul#subjects-list li { margin-bottom: var(--spacing-sm); }
-        .about-section .tab-text ul li i { color: var(--color-primary); font-size: 1.1rem; flex-shrink: 0;}
+        .about-section .tab-text ul li i { color: var(--color-primary); font-size: 1.1rem; flex-shrink: 0; }
         
         .cta-section { padding: var(--spacing-xl) 0; }
-        .cta-container {
-          display: flex; flex-direction: column; background-color: var(--color-light-gray);
-          padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border);
-        }
+        .cta-container { display: flex; flex-direction: column; background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border); }
         .cta-content { flex: 1; text-align: center; }
         .cta-content .section-title { text-align: center; }
         .cta-content p { max-width: 500px; margin: 0 auto var(--spacing-lg); }
-        
-        .main-footer { background: var(--color-light-gray); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
-        .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
-        
-        /* Дополнительные стили для списков на этой странице */
+
+        /* Футер */
+        .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
+        .footer-container { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) 0; }
+        .footer-about { display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-md); }
+        .footer-about p { font-size: 0.95rem; color: #6e6e6e; }
+        .footer-col { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-col h4 { font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm); font-size: 1rem; }
+        .footer-col a { font-size: 0.9rem; color: var(--color-text); }
+        .footer-col a:hover { color: var(--color-primary); }
+        .footer-col p { font-size: 0.9rem; color: #6e6e6e; }
+        .footer-col .footer-highlight { color: var(--color-primary); font-weight: 600; }
+        .footer-bottom { text-align: center; padding: var(--spacing-md); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+
         .check-list { list-style: none; padding-left: 0; margin-top: 16px; }
         .check-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
         .check-list li i { color: var(--color-primary); font-size: 1.2rem; margin-top: 3px; }
         
-        .final-quote {
-            font-family: var(--font-primary);
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            color: var(--color-secondary);
-            text-align: center;
-            max-width: 800px;
-            margin: var(--spacing-xl) auto;
-            line-height: 1.4;
-            padding: 0 var(--spacing-md);
-        }
+        .final-quote { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2.5rem); color: var(--color-secondary); text-align: center; max-width: 800px; margin: var(--spacing-xl) auto; line-height: 1.4; padding: 0 var(--spacing-md); }
 
-        .small-hint {
-            display: block;
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 10px;
-        }
+        .small-hint { display: block; font-size: 0.85rem; color: #777; margin-top: 10px; }
 
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
           .main-nav { display: flex; align-items: center; }
+          .header-right { gap: var(--spacing-lg); }
           .menu-toggle-btn { display: none; }
           .hero-container { flex-direction: row; text-align: left; gap: var(--spacing-lg); }
           .hero-content { flex: 1; }
           .hero-image-wrapper { flex: 1; }
           .features-grid { grid-template-columns: repeat(2, 1fr); }
-          
-          /* Сетка для 6 карточек (2 строки по 3 карточки) */
           .features-grid.grid-3-cols { grid-template-columns: repeat(3, 1fr); }
-          
           .about-section .tab-content-inner { grid-template-columns: 1fr 1fr; }
-          
-          /* Центрируем финальный CTA-блок на десктопах */
           .cta-container { padding: var(--spacing-xl); }
+          .footer-container { grid-template-columns: 2fr 1fr 1fr; padding: var(--spacing-xl) 0 var(--spacing-lg); }
         }
         
         @media (min-width: 992px) {
-            .features-grid { grid-template-columns: repeat(4, 1fr); }
-            /* Оставляем 3 колонки для нужного блока на больших экранах */
-            .features-grid.grid-3-cols { grid-template-columns: repeat(3, 1fr); }
+          .features-grid { grid-template-columns: repeat(4, 1fr); }
+          .features-grid.grid-3-cols { grid-template-columns: repeat(3, 1fr); }
         }
 
-        .main-nav-mobile {
-          display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg);
-          position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background);
-          transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99;
-        }
+        .main-nav-mobile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background); transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99; }
         .main-nav-mobile.active { transform: translateX(0); }
         .main-nav-mobile a { font-size: 1.5rem; font-weight: bold; color: var(--color-secondary); }
     </style>
@@ -228,24 +148,27 @@
           <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 12px;">На главную</a>
         </nav>
         <div class="header-right">
-            <button id="menu-toggle" class="menu-toggle-btn">
-              <i class="fi fi-rr-menu-burger"></i>
-            </button>
+          <div class="lang-switcher">
+            <a href="startup-game.html" class="active">RU</a>
+            <a href="startup-game-en.html">EN</a>
+            <a href="startup-game-sr.html">SR</a>
+          </div>
+          <button id="menu-toggle" class="menu-toggle-btn">
+            <i class="fi fi-rr-menu-burger"></i>
+          </button>
         </div>
       </div>
     </header>
     
     <main>
-        <!-- 1. Первый экран -->
         <section class="hero-section">
             <div class="container hero-container">
               <div class="hero-content">
                 <h1 class="hero-title">Игра, где подростки пробуют придумать свои первые идеи стартапов</h1>
                 <p class="hero-subtitle">Онлайн-встреча для подростков 10-14 лет, где можно попробовать себя в роли создателя идеи.<br><br>Мы вместе ищем проблемы вокруг нас, пробуем придумать решения и смотрим, как из идеи может появиться стартап или бизнес.</p>
-                
                 <div>
-                    <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Записаться на игру</a>
-                    <span class="small-hint">Напишите нам в Telegram, чтобы узнать ближайшую дату.</span>
+                  <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Записаться на игру</a>
+                  <span class="small-hint">Напишите нам в Telegram, чтобы узнать ближайшую дату.</span>
                 </div>
               </div>
               <div class="hero-image-wrapper">
@@ -254,12 +177,10 @@
             </div>
         </section>
         
-        <!-- 2. Коротко о формате -->
         <section id="format" class="features-section" style="background-color: #FFFFFF;">
             <div class="container">
                 <h2 class="section-title">Это не урок. Это игра.</h2>
                 <p class="section-subtitle">За одну встречу подростки проходят путь от наблюдения до идеи. Здесь нет правильных и неправильных идей. Важно пробовать, обсуждать и думать вместе.</p>
-                
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon-wrapper"><i class="fi fi-rr-search"></i></div>
@@ -276,7 +197,7 @@
                         <h3>Создают прототип</h3>
                         <p style="margin-top: auto; margin-bottom: auto;">Делают простой набросок или собирают модель из подручных материалов.</p>
                     </div>
-                     <div class="feature-card">
+                    <div class="feature-card">
                         <div class="feature-icon-wrapper"><i class="fi fi-rr-presentation"></i></div>
                         <h3>Презентуют</h3>
                         <p style="margin-top: auto; margin-bottom: auto;">Делятся идеей с остальной группой и получают бережную обратную связь.</p>
@@ -285,11 +206,9 @@
             </div>
         </section>
 
-        <!-- 3. Для кого эта игра & 4. Как проходит игра -->
         <section id="audience" class="about-section">
             <div class="container">
                 <div class="tab-content-inner">
-                   <!-- Блок: Для кого -->
                    <div class="tab-text">
                       <h3>Для подростков, которым интересно придумывать</h3>
                       <p>Эта встреча может быть интересна тем, кто:</p>
@@ -301,8 +220,6 @@
                       </ul>
                       <p style="margin-top: 20px; color: #6e6e6e; font-style: italic;">Иногда дети спрашивают: «А можно ли на этом заработать?». На игре мы спокойно исследуем такие вопросы и смотрим, как идеи могут превращаться в проекты.</p>
                    </div>
-                   
-                   <!-- Блок: Как проходит игра -->
                    <div id="process" class="tab-text">
                       <h3>Как проходит игра</h3>
                       <p>
@@ -323,12 +240,10 @@
             </div>
         </section>
 
-        <!-- 5. Чему учатся дети -->
         <section class="features-section" style="background-color: #FFFFFF;">
             <div class="container">
                 <h2 class="section-title">Чему учатся дети во время игры</h2>
                 <p class="section-subtitle">Это не курс предпринимательства. Скорее пространство для эксперимента, где подростки пробуют:</p>
-                
                 <div class="features-grid grid-3-cols">
                     <div class="feature-card" style="padding: var(--spacing-md);">
                         <i class="fi fi-rr-eye" style="font-size: 2.5rem; color: var(--color-primary); display:block; margin-bottom:12px;"></i>
@@ -358,11 +273,9 @@
             </div>
         </section>
 
-        <!-- 6. Атмосфера & 7. Важный момент для родителей -->
         <section class="about-section">
             <div class="container">
                 <div class="tab-content-inner">
-                   
                    <div class="tab-text">
                       <h3>Небольшая группа и комфортная атмосфера</h3>
                       <p>Мы стараемся сохранять атмосферу, где каждому комфортно участвовать:</p>
@@ -374,7 +287,6 @@
                       </ul>
                       <p style="margin-top: 15px;"><i>Иногда самые интересные идеи появляются там, где никто не боится предложить что-то необычное.</i></p>
                    </div>
-
                    <div class="tab-text" style="border: 2px solid var(--color-primary);">
                       <h3 style="color: var(--color-primary);">Подойдёт ли игра моему ребёнку?</h3>
                       <p>Даже если ребёнок:</p>
@@ -384,14 +296,12 @@
                         <li><i class="fi fi-rr-cross-circle"></i> не знает, какую идею придумать</li>
                       </ul>
                       <p style="margin-top: 15px; font-weight: bold; font-size: 1.1rem;">Это абсолютно нормально.</p>
-                      <p>На игре мы начинаем с простых вопросов и постепенно приходим к идеям вместе. Главное - любопытство и желание попробовать.</p>
+                      <p>На игре мы начинаем с простых вопросов и постепенно приходим к идеям вместе. Главное — любопытство и желание попробовать.</p>
                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- 8. Кто проводит игру -->
         <section class="features-section" style="background-color: #FFFFFF;">
             <div class="container" style="text-align: center; max-width: 800px;">
                 <h2 class="section-title">Кто проводит игру</h2>
@@ -401,7 +311,6 @@
             </div>
         </section>
 
-        <!-- 10. Финальный блок (Цитата) -->
         <section style="background-color: var(--color-light-gray); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
             <div class="container">
                 <h2 class="final-quote">
@@ -409,61 +318,71 @@
                     <span style="color: var(--color-primary);">«А что если попробовать сделать по-другому?»</span>
                 </h2>
                 <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 700px; margin: 0 auto var(--spacing-xl);">
-                    На этой игре у подростков есть возможность задать такой вопрос - и попробовать найти на него ответ.
+                    На этой игре у подростков есть возможность задать такой вопрос — и попробовать найти на него ответ.
                 </p>
             </div>
         </section>
 
-        <!-- 9. Попробовать игру (CTA) -->
         <section id="contacts" class="cta-section">
             <div class="container cta-container">
               <div class="cta-content">
                 <h2 class="section-title">Хотите присоединиться?</h2>
                 <p>Можно начать с одной встречи и посмотреть, понравится ли ребёнку формат. <strong>Стоимость участия: 10€</strong>.</p>
-                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 24px;">
-                    <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary" style="background-color: #27A7E7; border-color: #27A7E7;">
-                        <i class="fi fi-brands-telegram" style="margin-right: 8px;"></i> Написать в Telegram
-                    </a>
-                    <span class="small-hint">Напишите нам, чтобы узнать ближайшую дату.</span>
-                  </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 24px;">
+                  <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary" style="background-color: #27A7E7; border-color: #27A7E7;">
+                    <i class="fi fi-brands-telegram" style="margin-right: 8px;"></i> Написать в Telegram
+                  </a>
+                  <span class="small-hint">Напишите нам, чтобы узнать ближайшую дату.</span>
+                </div>
               </div>
             </div>
         </section>
-
     </main>
     
-    <footer class="main-footer" style="padding-top: 0;">
-         <div class="footer-bottom" style="border-top: none;">
-            <p>© 2024 Фрушка Искра. Все права защищены.</p>
-         </div>
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <div class="footer-about">
+          <a href="index.html" class="logo" style="flex-shrink: 0;"><img src="images/logo.svg" alt="Логотип Фрушка Искра"></a>
+          <p>Стартап-игра от команды Монтессори-школы «Искра». Помогаем подросткам 10–14 лет учиться замечать проблемы, придумывать решения и не бояться своих идей.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <p>Нови Сад, Лазе Нанчића 23</p>
+          <a href="https://t.me/fruiskra" target="_blank">Наш канал в Телеграм</a>
+          <a href="https://www.instagram.com/frushka_iskra/" target="_blank">Наш Instagram</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-highlight">@natalia_frushkaiskra</a>
+        </div>
+        <div class="footer-col">
+          <h4>Другие проекты</h4>
+          <a href="index.html">Монтессори-школа</a>
+          <a href="bloomkids/">BloomKids</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Фрушка Искра. Все права защищены.</p>
+      </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var menuToggle = document.getElementById('menu-toggle');
             var mainNav = document.querySelector('.main-nav');
-            
             if (menuToggle && mainNav) {
                 var mobileNavClone = mainNav.cloneNode(true);
                 mobileNavClone.classList.add('main-nav-mobile');
                 mobileNavClone.classList.remove('main-nav');
                 document.body.appendChild(mobileNavClone);
-        
                 menuToggle.addEventListener('click', function() {
                     mobileNavClone.classList.toggle('active');
                     var icon = menuToggle.querySelector('i');
-                    if (mobileNavClone.classList.contains('active')) {
-                        icon.className = 'fi fi-rr-cross';
-                    } else {
-                        icon.className = 'fi fi-rr-menu-burger';
-                    }
+                    if (mobileNavClone.classList.contains('active')) { icon.className = 'fi fi-rr-cross'; }
+                    else { icon.className = 'fi fi-rr-menu-burger'; }
                 });
-        
                 mobileNavClone.addEventListener('click', function(e) {
                     if (e.target.tagName === 'A') {
                         if (!e.target.hasAttribute('target')) {
-                             mobileNavClone.classList.remove('active');
-                             menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
+                            mobileNavClone.classList.remove('active');
+                            menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
                         }
                     }
                 });
