@@ -7,8 +7,7 @@
     <meta name="description" content="Готовые планы развивающих занятий для родителей, нянь и педагогов. Сотни идей для активностей с детьми 3-6 лет дома по методике Монтессори. Превратите рутину в развитие!">
 
     <link rel="canonical" href="https://iskramontessori.com/bloomkids/" />
-    
-    <!-- Полный набор Favicon -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -26,15 +25,12 @@
           --color-white: #FFFFFF;
           --color-light-gray: #FFFBF5;
           --color-border: #FBEEDA;
-        
-          --font-primary: 'Your Display Font', serif;
-          --font-secondary: 'Your Body Font', sans-serif;
-          
+          --font-primary: 'Merriweather', serif;
+          --font-secondary: 'Nunito Sans', sans-serif;
           --spacing-sm: 8px;
           --spacing-md: 16px;
           --spacing-lg: 32px;
           --spacing-xl: 64px;
-          
           --border-radius-soft: 20px;
           --border-radius-sharp: 12px;
           --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
@@ -42,108 +38,60 @@
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-          font-family: var(--font-secondary);
-          background-color: var(--color-background);
-          color: var(--color-text);
-          line-height: 1.6;
-          font-size: 16px;
-        }
+        body { font-family: var(--font-secondary); background-color: var(--color-background); color: var(--color-text); line-height: 1.6; font-size: 16px; }
         .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
         .logo img { height: 48px; width: auto; }
-        .section-title {
-          font-family: var(--font-primary);
-          color: var(--color-secondary);
-          font-size: 2.2rem;
-          text-align: center;
-          margin-bottom: var(--spacing-md);
-          line-height: 1.2;
-        }
-        .section-subtitle {
-          text-align: center;
-          max-width: 650px;
-          margin: 0 auto var(--spacing-lg);
-          font-size: 1.1rem;
-          color: #6e6e6e;
-        }
-        .btn {
-          display: inline-block;
-          padding: 12px 28px;
-          border-radius: 50px;
-          font-weight: bold;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-          border: none;
-        }
+        .section-title { font-family: var(--font-primary); color: var(--color-secondary); font-size: 2.2rem; text-align: center; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        .section-subtitle { text-align: center; max-width: 650px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem; color: #6e6e6e; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: none; }
         .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
         .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
-        .main-header {
-          padding: var(--spacing-md) 0;
-          position: sticky;
-          top: 0;
-          background-color: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          z-index: 100;
-          border-bottom: 1px solid var(--color-border);
-        }
+
+        .main-header { padding: var(--spacing-md) 0; position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--color-border); }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .main-nav { display: none; }
         .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
         .main-nav a:hover { color: var(--color-primary); }
-        .menu-toggle-btn {
-          background: none; border: none; font-size: 1.5rem; color: var(--color-secondary);
-          cursor: pointer; display: block;
-        }
+        .header-right { display: flex; align-items: center; gap: var(--spacing-md); }
+        .lang-switcher { display: flex; gap: var(--spacing-sm); }
+        .lang-switcher a { font-size: 0.9rem; font-weight: bold; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--border-radius-sharp); transition: all 0.3s ease; }
+        .lang-switcher a.active, .lang-switcher a:hover { background-color: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary); }
+        .menu-toggle-btn { background: none; border: none; font-size: 1.5rem; color: var(--color-secondary); cursor: pointer; display: block; }
+
         .hero-section { background-color: var(--color-light-gray); padding: var(--spacing-lg) 0 var(--spacing-xl); }
-        .hero-container {
-          display: flex; flex-direction: column; align-items: center; text-align: center;
-        }
+        .hero-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .hero-content { margin-bottom: var(--spacing-lg); }
-        .hero-title {
-          font-family: var(--font-primary);
-          font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem);
-          line-height: 1.2;
-          margin-bottom: var(--spacing-md);
-          overflow-wrap: break-word;
-          text-wrap: balance;
-        }
+        .hero-title { font-family: var(--font-primary); font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem); line-height: 1.2; margin-bottom: var(--spacing-md); overflow-wrap: break-word; text-wrap: balance; }
         .hero-subtitle { font-size: 1.1rem; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
         .hero-image-wrapper img { border-radius: var(--border-radius-soft); }
+
         .philosophy-section, .why-us-section { padding: var(--spacing-xl) 0; }
         .why-us-container { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-lg); }
         .why-us-text { flex: 1; }
         .why-us-text h3 { font-family: var(--font-primary); color: var(--color-secondary); font-size: 1.8rem; margin-bottom: var(--spacing-md); }
         .why-us-image { flex: 1; width: 100%; }
         .why-us-image img { border-radius: var(--border-radius-soft); }
+
         .features-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
         .features-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
-        .feature-card {
-          background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center;
-        }
-        .feature-icon-wrapper {
-          width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%;
-          background-color: var(--color-light-gray); display: flex; align-items: center;
-          justify-content: center; font-size: 1.8rem; color: var(--color-secondary);
-        }
+        .feature-card { background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center; }
+        .feature-icon-wrapper { width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%; background-color: var(--color-light-gray); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-secondary); }
         .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); color: var(--color-secondary); }
+
         .how-it-works-section { padding: var(--spacing-xl) 0; }
         .steps-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
         .step-card { text-align: center; padding: var(--spacing-lg); }
-        .step-number {
-          width: 50px; height: 50px; background-color: var(--color-secondary); color: var(--color-white);
-          border-radius: 50%; display: flex; align-items: center; justify-content: center;
-          font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--spacing-md);
-        }
+        .step-number { width: 50px; height: 50px; background-color: var(--color-secondary); color: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--spacing-md); }
         .step-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); }
+
         .about-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
         .about-section .tab-content-inner { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); align-items: start; }
         .about-section .tab-text { background-color: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); height: 100%; }
         .about-section .tab-text h3 { color: var(--color-secondary); font-family: var(--font-primary); font-size: 1.8rem; margin-bottom: var(--spacing-sm); }
+
         .testimonials-section { padding: var(--spacing-xl) 0; }
         .testimonials-grid { display: grid; gap: var(--spacing-lg); }
         .testimonial-card { background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); }
@@ -151,32 +99,21 @@
         .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--color-white); }
         .testimonial-header h4 { font-family: var(--font-primary); font-size: 1.2rem; color: var(--color-text); line-height: 1.3; }
         .testimonial-card p { font-style: italic; color: #555; position: relative; padding-left: 20px; }
-        .testimonial-card p::before {
-            content: '“'; position: absolute; left: 0; top: -10px; font-size: 2.5rem; color: var(--color-border);
-        }
+        .testimonial-card p::before { content: '"'; position: absolute; left: 0; top: -10px; font-size: 2.5rem; color: var(--color-border); }
+
         .cta-section { padding: var(--spacing-xl) 0; }
-        .cta-container {
-          display: flex; flex-direction: column; background-color: var(--color-light-gray);
-          padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border);
-        }
+        .cta-container { display: flex; flex-direction: column; background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border); }
         .cta-content { flex: 1; text-align: center; }
         .cta-content .section-title { text-align: center; }
         .cta-content p { max-width: 500px; margin: 0 auto var(--spacing-lg); }
         .cta-image-desktop { display: none; }
+
         .pricing-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
         .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
-        .pricing-card {
-            background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg);
-            text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s;
-            display: flex; flex-direction: column;
-        }
+        .pricing-card { background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
         .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
         .pricing-card.popular { border: 2px solid var(--color-primary); position: relative; }
-        .pricing-card.popular::before {
-            content: 'Популярный выбор'; position: absolute; top: -15px; left: 50%;
-            transform: translateX(-50%); background: var(--color-primary); color: var(--color-white);
-            padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold;
-        }
+        .pricing-card.popular::before { content: 'Популярный выбор'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: var(--color-white); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; }
         .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
         .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); }
         .plan-age-focus { font-size: 0.9rem; color: #777; margin-bottom: var(--spacing-md); }
@@ -185,53 +122,25 @@
         .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; }
         .pricing-card .feature-unavailable { color: #aaa; }
         .pricing-card .feature-unavailable i { color: #ccc; }
-        .main-footer { background: var(--color-light-gray); padding: var(--spacing-xl) 0 0; border-top: 1px solid var(--color-border); }
-        
-        /* --- ИЗМЕНЕНИЯ В ФУТЕРЕ ЗДЕСЬ --- */
-        .footer-container { 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: var(--spacing-lg); 
-            text-align: center;
-        }
-        .footer-about {
-            text-align: center;
-        }
-        .footer-about .logo {
-             margin: 0 auto var(--spacing-md);
-        }
-        .footer-links h4, .footer-community h4, .footer-contact h4 {
-          font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-md);
-        }
-        .footer-links a, .footer-community a, .footer-contact a { display: block; margin-bottom: var(--spacing-sm); }
-        .footer-contact p { margin-bottom: var(--spacing-sm); }
-        a.footer-contact-link:hover { color: var(--color-primary); }
-        .footer-bottom { text-align: center; padding: var(--spacing-md); margin-top: var(--spacing-lg); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
-        
-        @media (min-width: 992px) {
-          .footer-container {
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: var(--spacing-xl);
-            text-align: left;
-            align-items: start;
-          }
-           .footer-about {
-             display: flex;
-             align-items: start;
-             gap: var(--spacing-md);
-             text-align: left;
-           }
-           .footer-about .logo {
-             margin: 0;
-             flex-shrink: 0;
-           }
-        }
-        /* --- КОНЕЦ ИЗМЕНЕНИЙ --- */
+
+        /* Футер */
+        .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
+        .footer-container { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) 0; }
+        .footer-about { display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-md); }
+        .footer-about p { font-size: 0.95rem; color: #6e6e6e; }
+        .footer-col { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-col h4 { font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm); font-size: 1rem; }
+        .footer-col a { font-size: 0.9rem; color: var(--color-text); }
+        .footer-col a:hover { color: var(--color-primary); }
+        .footer-col p { font-size: 0.9rem; color: #6e6e6e; }
+        .footer-col .footer-highlight { color: var(--color-primary); font-weight: 600; }
+        .footer-bottom { text-align: center; padding: var(--spacing-md); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
 
         @media (min-width: 768px) {
           .section-title { font-size: 2.8rem; }
+          .main-nav { display: flex; align-items: center; }
+          .header-right { gap: var(--spacing-lg); }
           .menu-toggle-btn { display: none; }
-          .main-nav { display: flex; flex-direction: row; position: static; width: auto; background: none; padding: 0; }
           .hero-container { flex-direction: row; text-align: left; gap: var(--spacing-lg); }
           .hero-content { flex: 1; }
           .hero-image-wrapper { flex: 1; }
@@ -243,31 +152,41 @@
           .cta-content { text-align: left; }
           .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
           .cta-image-desktop { display: block; flex-shrink: 0; flex: 0 0 40%; }
+          .footer-container { grid-template-columns: 2fr 1fr 1fr; padding: var(--spacing-xl) 0 var(--spacing-lg); }
         }
-        .main-nav-mobile {
-          display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg);
-          position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background);
-          transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99;
-        }
+
+        .main-nav-mobile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background); transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99; }
         .main-nav-mobile.active { transform: translateX(0); }
         .main-nav-mobile a { font-size: 1.5rem; font-weight: bold; color: var(--color-secondary); }
     </style>
 </head>
 <body>
 
- <header class="main-header"> <div class="container header-container"> <a href="/" class="logo"> 
-         <img src="images/logo.svg" alt="Логотип BloomKids"> </a> 
-         <nav class="main-nav"> 
-         <a href="#why-us">Наша история</a> 
-         <a href="#for-parents">Для кого</a> 
-         <a href="#how-it-works">Как это работает</a> 
-         <a href="#pricing">Тарифы</a> 
-         <a href="#contacts">Контакты</a> </nav> 
-         <button id="menu-toggle" class="menu-toggle-btn"> 
-         <i class="fi fi-rr-menu-burger"></i> 
-     </button> 
-     </div> 
- </header>
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="/" class="logo">
+          <img src="images/logo.svg" alt="Логотип BloomKids">
+        </a>
+        <nav class="main-nav">
+          <a href="#why-us">Наша история</a>
+          <a href="#for-parents">Для кого</a>
+          <a href="#how-it-works">Как это работает</a>
+          <a href="#pricing">Тарифы</a>
+          <a href="#contacts">Контакты</a>
+          <a href="../startup-game.html" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 20px;">Стартап-игра</a>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switcher">
+            <a href="index.html" class="active">RU</a>
+            <a href="en.html">EN</a>
+            <a href="sr.html">SR</a>
+          </div>
+          <button id="menu-toggle" class="menu-toggle-btn">
+            <i class="fi fi-rr-menu-burger"></i>
+          </button>
+        </div>
+      </div>
+    </header>
     
     <main>
       <section class="hero-section">
@@ -285,8 +204,8 @@
       
       <section id="philosophy" class="philosophy-section">
         <div class="container">
-            <h2 class="section-title">Почему мы верим в гуманистический подход</h2>
-            <p class="section-subtitle">Мы убеждены, что задача взрослого не "наполнить" ребенка знаниями, а создать среду, в которой он сам захочет учиться. Гуманистическая педагогика видит в ребенке личность, достойную уважения. Это воспитание в свободе, но не во вседозволенности. Индивидуально подготовленные планы — это ключи к пониманию ребенка, которые помогают стать не строгим учителем, а чутким наставником.</p>
+          <h2 class="section-title">Почему мы верим в гуманистический подход</h2>
+          <p class="section-subtitle">Мы убеждены, что задача взрослого не «наполнить» ребенка знаниями, а создать среду, в которой он сам захочет учиться. Гуманистическая педагогика видит в ребенке личность, достойную уважения. Это воспитание в свободе, но не во вседозволенности. Индивидуально подготовленные планы — это ключи к пониманию ребенка, которые помогают стать не строгим учителем, а чутким наставником.</p>
         </div>
       </section>
 
@@ -296,23 +215,17 @@
           <p class="section-subtitle">Этот продукт для вас, если вы — родитель, няня или педагог ребенка 3–6 лет. Мы знаем, как порой бывает трудно найти время и силы на гармоничное развитие.</p>
           <div class="features-grid">
             <div class="feature-card">
-              <div class="feature-icon-wrapper">
-                <i class="fi fi-rr-hourglass-end"></i>
-              </div>
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-hourglass-end"></i></div>
               <h3>Экономить время</h3>
               <p>Больше не нужно часами искать идеи и готовить материалы. У вас будет готовый, продуманный план на каждый день.</p>
             </div>
             <div class="feature-card">
-              <div class="feature-icon-wrapper">
-                <i class="fi fi-rr-lightbulb-on"></i>
-              </div>
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-lightbulb-on"></i></div>
               <h3>Находить новые идеи</h3>
-              <p>Забудьте о вопросе "Чем сегодня заняться?" Мы предлагаем сотни увлекательных активностей, адаптированных под вашего ребенка.</p>
+              <p>Забудьте о вопросе «Чем сегодня заняться?» Мы предлагаем сотни увлекательных активностей, адаптированных под вашего ребенка.</p>
             </div>
             <div class="feature-card">
-              <div class="feature-icon-wrapper">
-                <i class="fi fi-rr-family"></i>
-              </div>
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-family"></i></div>
               <h3>Укреплять связь</h3>
               <p>Наши методики помогают построить диалог и доверие, превращая обучение в ваше особое время вместе.</p>
             </div>
@@ -322,18 +235,18 @@
       
       <section id="why-us" class="why-us-section">
         <div class="container">
-            <h2 class="section-title">Почему нам можно доверять?</h2>
-            <div class="why-us-container">
-                <div class="why-us-text">
-                    <h3>Наш путь — от родителей к практикам</h3>
-                    <p>Однажды мы, как и вы, искали ответы. Этот путь привел нас к созданию детского сада, а затем — к открытию Монтессори-школы. Мы не просто теоретики, мы — практики.</p>
-                    <p>Наша команда состоит из опытных педагогов, включая сертифицированных Монтессори-специалистов. Мы делимся тем, что сработало в наших семьях и в стенах нашей школы, что зажгло искру любопытства в сотнях детей и сделало их отношения с родителями теплее.</p>
-                    <p>Наш опыт показал, что эти принципы и готовые планы — бесценный инструмент для всех, кто работает с детьми. Сегодня наша платформа объединяет родителей, нянь и педагогов общей целью: помочь каждому ребенку раскрыть свой потенциал через совместную деятельность и уважение.</p>
-                </div>
-                <div class="why-us-image">
-                    <img src="images/main2.jpg" alt="Наша команда">
-                </div>
+          <h2 class="section-title">Почему нам можно доверять?</h2>
+          <div class="why-us-container">
+            <div class="why-us-text">
+              <h3>Наш путь — от родителей к практикам</h3>
+              <p>Однажды мы, как и вы, искали ответы. Этот путь привел нас к созданию детского сада, а затем — к открытию Монтессори-школы. Мы не просто теоретики, мы — практики.</p>
+              <p style="margin-top: var(--spacing-md);">Наша команда состоит из опытных педагогов, включая сертифицированных Монтессори-специалистов. Мы делимся тем, что сработало в наших семьях и в стенах нашей школы, что зажгло искру любопытства в сотнях детей и сделало их отношения с родителями теплее.</p>
+              <p style="margin-top: var(--spacing-md);">Наш опыт показал, что эти принципы и готовые планы — бесценный инструмент для всех, кто работает с детьми. Сегодня наша платформа объединяет родителей, нянь и педагогов общей целью: помочь каждому ребенку раскрыть свой потенциал через совместную деятельность и уважение.</p>
             </div>
+            <div class="why-us-image">
+              <img src="images/main2.jpg" alt="Наша команда">
+            </div>
+          </div>
         </div>
       </section>
 
@@ -365,14 +278,14 @@
         <div class="container">
           <h2 class="section-title">Что внутри вашего персонального плана?</h2>
           <div class="tab-content-inner">
-             <div class="tab-text">
-                <h3>Увлекательные развивающие занятия</h3>
-                <p>Короткие занятия от 15 минут для развития логики, моторики и речи. Мы строим активности так, чтобы ребенок учился с интересом, без принуждения.</p>
-             </div>
-             <div class="tab-text">
-                <h3>Полезные навыки в быту</h3>
-                <p>Учим убирать за собой игрушки, помогать на кухне, складывать одежду. Превращаем рутину в увлекательный процесс, развивающий ответственность.</p>
-             </div>
+            <div class="tab-text">
+              <h3>Увлекательные развивающие занятия</h3>
+              <p>Короткие занятия от 15 минут для развития логики, моторики и речи. Мы строим активности так, чтобы ребенок учился с интересом, без принуждения.</p>
+            </div>
+            <div class="tab-text">
+              <h3>Полезные навыки в быту</h3>
+              <p>Учим убирать за собой игрушки, помогать на кухне, складывать одежду. Превращаем рутину в увлекательный процесс, развивающий ответственность.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -393,61 +306,61 @@
                 <img src="https://placehold.co/100x100/eeeeee/333333?text=Ю" alt="Фото пользователя">
                 <h4>Юлия, мама 5-летней Алисы</h4>
               </div>
-              <p>Раньше моя Алиса быстро теряла интерес. Я могла полвечера строить план на следующий день, а она за 5 минут перечёркивала все мои начинания. Однако, включив Bloomkids в наш день, я заметила, что дочка зажигается. Ей интересно. Иногда она даже сама просит: 'Мама, давай поиграем в школу'.</p>
+              <p>Раньше моя Алиса быстро теряла интерес. Я могла полвечера строить план на следующий день, а она за 5 минут перечёркивала все мои начинания. Однако, включив Bloomkids в наш день, я заметила, что дочка зажигается. Ей интересно. Иногда она даже сама просит: «Мама, давай поиграем в школу».</p>
             </article>
             <article class="testimonial-card">
               <div class="testimonial-header">
                 <img src="https://placehold.co/100x100/eeeeee/333333?text=О" alt="Фото пользователя">
                 <h4>Олег, папа 6-летнего Игоря</h4>
               </div>
-              <p>Мне всегда хотелось больше времени проводить с сыном. Но как подступиться, я не знал. Теперь с помощью личного помощника мы нашли то, что интересно и мне и ребенку. Последнее наше увлечение - кулинария. Разбираем вместе предложенные рецепты, закупаем ингредиенты, готовим. А едим результат нашего труда вообще всей семьей. Даже бабушка хвалит наши печеньки с шоколадом.</p>
+              <p>Мне всегда хотелось больше времени проводить с сыном. Но как подступиться, я не знал. Теперь с помощью личного помощника мы нашли то, что интересно и мне и ребенку. Последнее наше увлечение — кулинария. Разбираем вместе предложенные рецепты, закупаем ингредиенты, готовим. А едим результат нашего труда вообще всей семьей.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section id="pricing" class="pricing-section">
-          <div class="container">
-              <h2 class="section-title">Выберите свой тариф</h2>
-              <div class="pricing-grid">
-                  <div class="pricing-card">
-                      <h3>Месяц</h3>
-                      <p class="price">15€</p>
-                      <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
-                      <ul class="features-list">
-                          <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
-                          <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
-                          <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
-                          <li class="feature-unavailable"><i class="fi fi-rr-cross-small"></i>Онлайн-консультации</li>
-                      </ul>
-                      <a href="#cta" class="btn btn-secondary">Выбрать</a>
-                  </div>
-                  <div class="pricing-card popular">
-                      <h3>Полгода</h3>
-                      <p class="price">70€</p>
-                      <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
-                      <ul class="features-list">
-                          <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
-                          <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
-                          <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
-                          <li><i class="fi fi-rr-check"></i>1 онлайн-консультация</li>
-                      </ul>
-                      <a href="#cta" class="btn btn-primary">Выбрать</a>
-                  </div>
-                  <div class="pricing-card">
-                      <h3>Год</h3>
-                      <p class="price">120€</p>
-                      <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
-                      <ul class="features-list">
-                           <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
-                           <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
-                           <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
-                           <li><i class="fi fi-rr-check"></i>3 онлайн-консультации</li>
-                      </ul>
-                      <a href="#cta" class="btn btn-secondary">Выбрать</a>
-                  </div>
-              </div>
+        <div class="container">
+          <h2 class="section-title">Выберите свой тариф</h2>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h3>Месяц</h3>
+              <p class="price">15€</p>
+              <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
+                <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
+                <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
+                <li class="feature-unavailable"><i class="fi fi-rr-cross-small"></i>Онлайн-консультации</li>
+              </ul>
+              <a href="#cta" class="btn btn-secondary">Выбрать</a>
+            </div>
+            <div class="pricing-card popular">
+              <h3>Полгода</h3>
+              <p class="price">70€</p>
+              <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
+                <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
+                <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
+                <li><i class="fi fi-rr-check"></i>1 онлайн-консультация</li>
+              </ul>
+              <a href="#cta" class="btn btn-primary">Выбрать</a>
+            </div>
+            <div class="pricing-card">
+              <h3>Год</h3>
+              <p class="price">120€</p>
+              <p class="plan-age-focus">Идеально для детей 3-6 лет</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Еженедельные планы</li>
+                <li><i class="fi fi-rr-check"></i>Доступ ко всем материалам</li>
+                <li><i class="fi fi-rr-check"></i>Поддержка в чате</li>
+                <li><i class="fi fi-rr-check"></i>3 онлайн-консультации</li>
+              </ul>
+              <a href="#cta" class="btn btn-secondary">Выбрать</a>
+            </div>
           </div>
+        </div>
       </section>
 
       <section id="cta" class="cta-section">
@@ -462,38 +375,25 @@
           </div>
         </div>
       </section>
-    
     </main>
     
     <footer id="contacts" class="main-footer">
       <div class="container footer-container">
         <div class="footer-about">
-          <a href="/" class="logo">
-            <img src="images/logo.svg" alt="Логотип BloomKids">
-          </a>
+          <a href="/" class="logo" style="flex-shrink: 0;"><img src="images/logo.svg" alt="Логотип BloomKids"></a>
           <p>Помогаем родителям, няням и педагогам развивать детей от 3 до 6 лет через совместную деятельность, основанную на гуманистической педагогике.</p>
         </div>
-        <div class="footer-community">
-          <h4>Присоединяйтесь</h4>
+        <div class="footer-col">
+          <h4>Контакты</h4>
           <a href="https://t.me/fruiskra" target="_blank">Наш канал в Телеграм</a>
           <a href="https://www.instagram.com/frushka_iskra/" target="_blank">Наш Instagram</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-highlight">@natalia_frushkaiskra</a>
         </div>
-        <div class="footer-contact">
-          <h4>Связь для консультаций</h4>
-          <p>Есть вопросы? Напишите нам:</p>
-          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-contact-link">@natalia_frushkaiskra</a>
-        </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Документы</h4>
-          <a href="../Docs/SL_RU_Politika_konfidentsialnosti.pdf" target="_blank">
-            Политика конфиденциальности
-          </a>
-          <a href="../Docs/SL_RU_Publichnaya_oferta.pdf" target="_blank">
-            Публичная оферта
-          </a>
-          <a href="../Docs/SL_RU_Cookie_Policy.pdf" target="_blank">
-            Cookie Policy
-          </a>
+          <a href="../Docs/SL_RU_Politika_konfidentsialnosti.pdf" target="_blank">Политика конфиденциальности</a>
+          <a href="../Docs/SL_RU_Publichnaya_oferta.pdf" target="_blank">Публичная оферта</a>
+          <a href="../Docs/SL_RU_Cookie_Policy.pdf" target="_blank">Cookie Policy</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -505,27 +405,22 @@
         document.addEventListener('DOMContentLoaded', function () {
             var menuToggle = document.getElementById('menu-toggle');
             var mainNav = document.querySelector('.main-nav');
-            var mobileNavClone;
-            
-            if (mainNav) {
-                mobileNavClone = mainNav.cloneNode(true);
+            if (menuToggle && mainNav) {
+                var mobileNavClone = mainNav.cloneNode(true);
                 mobileNavClone.classList.add('main-nav-mobile');
                 mobileNavClone.classList.remove('main-nav');
                 document.body.appendChild(mobileNavClone);
-        
                 menuToggle.addEventListener('click', function() {
-                    var isMenuOpen = mobileNavClone.classList.contains('active');
-                    if (isMenuOpen) {
-                        mobileNavClone.classList.remove('active');
-                    } else {
-                        mobileNavClone.classList.add('active');
-                    }
+                    mobileNavClone.classList.toggle('active');
+                    var icon = menuToggle.querySelector('i');
+                    if (mobileNavClone.classList.contains('active')) { icon.className = 'fi fi-rr-cross'; }
+                    else { icon.className = 'fi fi-rr-menu-burger'; }
                 });
-        
                 mobileNavClone.addEventListener('click', function(e) {
                     if (e.target.tagName === 'A') {
                         if (!e.target.hasAttribute('target')) {
                             mobileNavClone.classList.remove('active');
+                            menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
                         }
                     }
                 });
