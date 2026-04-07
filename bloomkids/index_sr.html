@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomKids - Vodič za razvoj za roditelje, dadilje i pedagoge</title>
+    <meta name="description" content="Gotovi planovi razvojnih aktivnosti za roditelje, dadilje i pedagoge. Stotine ideja za aktivnosti sa decom od 3-6 godina kod kuće po Montesori metodi.">
+
+    <link rel="canonical" href="https://iskramontessori.com/bloomkids/sr.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'>
+    
+    <style>
+        :root {
+          --color-primary: #D4A01D;
+          --color-secondary: #D87C5B;
+          --color-background: #FFFFFF;
+          --color-text: #4A4A4A;
+          --color-white: #FFFFFF;
+          --color-light-gray: #FFFBF5;
+          --color-border: #FBEEDA;
+          --font-primary: 'Merriweather', serif;
+          --font-secondary: 'Nunito Sans', sans-serif;
+          --spacing-sm: 8px;
+          --spacing-md: 16px;
+          --spacing-lg: 32px;
+          --spacing-xl: 64px;
+          --border-radius-soft: 20px;
+          --border-radius-sharp: 12px;
+          --shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-secondary); background-color: var(--color-background); color: var(--color-text); line-height: 1.6; font-size: 16px; }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        .logo img { height: 48px; width: auto; }
+        .section-title { font-family: var(--font-primary); color: var(--color-secondary); font-size: 2.2rem; text-align: center; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        .section-subtitle { text-align: center; max-width: 650px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem; color: #6e6e6e; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background-color: var(--color-primary); color: var(--color-white); }
+        .btn-secondary { background-color: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(212, 160, 29, 0.3); }
+        .main-header { padding: var(--spacing-md) 0; position: sticky; top: 0; background-color: rgba(255,255,255,0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--color-border); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .main-nav { display: none; }
+        .main-nav a { margin: 0 var(--spacing-md); font-weight: 600; }
+        .main-nav a:hover { color: var(--color-primary); }
+        .header-right { display: flex; align-items: center; gap: var(--spacing-md); }
+        .lang-switcher { display: flex; gap: var(--spacing-sm); }
+        .lang-switcher a { font-size: 0.9rem; font-weight: bold; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--border-radius-sharp); transition: all 0.3s ease; }
+        .lang-switcher a.active, .lang-switcher a:hover { background-color: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary); }
+        .menu-toggle-btn { background: none; border: none; font-size: 1.5rem; color: var(--color-secondary); cursor: pointer; display: block; }
+        .hero-section { background-color: var(--color-light-gray); padding: var(--spacing-lg) 0 var(--spacing-xl); }
+        .hero-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .hero-content { margin-bottom: var(--spacing-lg); }
+        .hero-title { font-family: var(--font-primary); font-size: clamp(2.2rem, 1.8rem + 3vw, 3.5rem); line-height: 1.2; margin-bottom: var(--spacing-md); overflow-wrap: break-word; text-wrap: balance; }
+        .hero-subtitle { font-size: 1.1rem; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-image-wrapper img { border-radius: var(--border-radius-soft); }
+        .philosophy-section, .why-us-section { padding: var(--spacing-xl) 0; }
+        .why-us-container { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-lg); }
+        .why-us-text { flex: 1; }
+        .why-us-text h3 { font-family: var(--font-primary); color: var(--color-secondary); font-size: 1.8rem; margin-bottom: var(--spacing-md); }
+        .why-us-image { flex: 1; width: 100%; }
+        .why-us-image img { border-radius: var(--border-radius-soft); }
+        .features-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
+        .features-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
+        .feature-card { background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); text-align: center; }
+        .feature-icon-wrapper { width: 60px; height: 60px; margin: 0 auto var(--spacing-md); border-radius: 50%; background-color: var(--color-light-gray); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-secondary); }
+        .feature-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); color: var(--color-secondary); }
+        .how-it-works-section { padding: var(--spacing-xl) 0; }
+        .steps-grid { display: grid; gap: var(--spacing-lg); grid-template-columns: 1fr; }
+        .step-card { text-align: center; padding: var(--spacing-lg); }
+        .step-number { width: 50px; height: 50px; background-color: var(--color-secondary); color: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--spacing-md); }
+        .step-card h3 { font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: var(--spacing-sm); }
+        .about-section { padding: var(--spacing-xl) 0; background: var(--color-light-gray); }
+        .about-section .tab-content-inner { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); align-items: start; }
+        .about-section .tab-text { background-color: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); height: 100%; }
+        .about-section .tab-text h3 { color: var(--color-secondary); font-family: var(--font-primary); font-size: 1.8rem; margin-bottom: var(--spacing-sm); }
+        .testimonials-section { padding: var(--spacing-xl) 0; }
+        .testimonials-grid { display: grid; gap: var(--spacing-lg); }
+        .testimonial-card { background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); }
+        .testimonial-header { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+        .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--color-white); }
+        .testimonial-header h4 { font-family: var(--font-primary); font-size: 1.2rem; color: var(--color-text); line-height: 1.3; }
+        .testimonial-card p { font-style: italic; color: #555; position: relative; padding-left: 20px; }
+        .testimonial-card p::before { content: '"'; position: absolute; left: 0; top: -10px; font-size: 2.5rem; color: var(--color-border); }
+        .cta-section { padding: var(--spacing-xl) 0; }
+        .cta-container { display: flex; flex-direction: column; background-color: var(--color-light-gray); padding: var(--spacing-lg); border-radius: var(--border-radius-soft); border: 1px solid var(--color-border); }
+        .cta-content { flex: 1; text-align: center; }
+        .cta-content .section-title { text-align: center; }
+        .cta-content p { max-width: 500px; margin: 0 auto var(--spacing-lg); }
+        .cta-image-desktop { display: none; }
+        .pricing-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
+        .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
+        .pricing-card { background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .pricing-card.popular { border: 2px solid var(--color-primary); position: relative; }
+        .pricing-card.popular::before { content: 'Najpopularniji izbor'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: var(--color-white); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; }
+        .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
+        .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); }
+        .plan-age-focus { font-size: 0.9rem; color: #777; margin-bottom: var(--spacing-md); }
+        .pricing-card .features-list { list-style: none; margin-bottom: var(--spacing-lg); text-align: left; flex-grow: 1; }
+        .pricing-card .features-list li { margin-bottom: 12px; display: flex; align-items: center; gap: var(--spacing-sm); }
+        .pricing-card .features-list i { color: var(--color-primary); font-size: 1.2rem; }
+        .pricing-card .feature-unavailable { color: #aaa; }
+        .pricing-card .feature-unavailable i { color: #ccc; }
+        .main-footer { background: var(--color-light-gray); border-top: 1px solid var(--color-border); }
+        .footer-container { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) 0; }
+        .footer-about { display: flex; flex-direction: row; align-items: flex-start; gap: var(--spacing-md); }
+        .footer-about p { font-size: 0.95rem; color: #6e6e6e; }
+        .footer-col { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-col h4 { font-family: var(--font-primary); color: var(--color-secondary); margin-bottom: var(--spacing-sm); font-size: 1rem; }
+        .footer-col a { font-size: 0.9rem; color: var(--color-text); }
+        .footer-col a:hover { color: var(--color-primary); }
+        .footer-col p { font-size: 0.9rem; color: #6e6e6e; }
+        .footer-col .footer-highlight { color: var(--color-primary); font-weight: 600; }
+        .footer-bottom { text-align: center; padding: var(--spacing-md); border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+        @media (min-width: 768px) {
+          .section-title { font-size: 2.8rem; }
+          .main-nav { display: flex; align-items: center; }
+          .header-right { gap: var(--spacing-lg); }
+          .menu-toggle-btn { display: none; }
+          .hero-container { flex-direction: row; text-align: left; gap: var(--spacing-lg); }
+          .hero-content { flex: 1; }
+          .hero-image-wrapper { flex: 1; }
+          .why-us-container { flex-direction: row; gap: var(--spacing-xl); }
+          .features-grid, .steps-grid, .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+          .about-section .tab-content-inner { grid-template-columns: 1fr 1fr; }
+          .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+          .cta-container { flex-direction: row; align-items: center; gap: var(--spacing-xl); padding: var(--spacing-xl); }
+          .cta-content { text-align: left; }
+          .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
+          .cta-image-desktop { display: block; flex-shrink: 0; flex: 0 0 40%; }
+          .footer-container { grid-template-columns: 2fr 1fr 1fr; padding: var(--spacing-xl) 0 var(--spacing-lg); }
+        }
+        .main-nav-mobile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--color-background); transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 99; }
+        .main-nav-mobile.active { transform: translateX(0); }
+        .main-nav-mobile a { font-size: 1.5rem; font-weight: bold; color: var(--color-secondary); }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="/" class="logo">
+          <img src="images/logo.svg" alt="BloomKids Logo">
+        </a>
+        <nav class="main-nav">
+          <a href="#why-us">Naša priča</a>
+          <a href="#for-parents">Za koga</a>
+          <a href="#how-it-works">Kako funkcioniše</a>
+          <a href="#pricing">Cenovnik</a>
+          <a href="#contacts">Kontakti</a>
+          <a href="../startup-game.html" class="btn btn-secondary" style="padding: 8px 16px; margin-left: 20px;">Startup igra</a>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switcher">
+            <a href="index.html">RU</a>
+            <a href="en.html">EN</a>
+            <a href="sr.html" class="active">SR</a>
+          </div>
+          <button id="menu-toggle" class="menu-toggle-btn">
+            <i class="fi fi-rr-menu-burger"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">Vaš lični vodič za razvoj deteta zasnovan na humanističkim pristupima</h1>
+            <p class="hero-subtitle">Personalizovani planovi aktivnosti za decu od 3 do 6 godina koji pretvaraju rutinu u uzbudljivu avanturu, a igru — u razvoj. Bez složenih priprema i dodatnih napora.</p>
+            <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Dobiti konsultaciju</a>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="images/main1.jpg" alt="Roditelj i dete zajedno u kreativnoj aktivnosti">
+          </div>
+        </div>
+      </section>
+      
+      <section id="philosophy" class="philosophy-section">
+        <div class="container">
+          <h2 class="section-title">Zašto verujemo u humanistički pristup</h2>
+          <p class="section-subtitle">Verujemo da zadatak odrasle osobe nije da "napuni" dete znanjem, već da stvori okruženje u kom ono samo želi da uči. Humanistička pedagogija vidi u detetu ličnost dostojnu poštovanja. To je vaspitanje u slobodi — ali ne u raspuštenosti. Individualno pripremljeni planovi su ključevi za razumevanje deteta koji pomažu da postanete ne strog učitelj, već pažljiv mentor.</p>
+        </div>
+      </section>
+
+      <section id="for-parents" class="features-section">
+        <div class="container">
+          <h2 class="section-title">Za one koji razvijaju decu od 3-6 godina, a ne samo zabavljaju</h2>
+          <p class="section-subtitle">Ovaj proizvod je za vas ako ste roditelj, dadilja ili pedagog deteta od 3 do 6 godina. Znamo koliko može biti teško pronaći vreme i snagu za harmoničan razvoj.</p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-hourglass-end"></i></div>
+              <h3>Uštedeti vreme</h3>
+              <p>Više nije potrebno satima tražiti ideje i pripremati materijale. Imaćete gotov, promišljen plan za svaki dan.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-lightbulb-on"></i></div>
+              <h3>Pronaći nove ideje</h3>
+              <p>Zaboravite na pitanje "Čime da se bavimo danas?" Nudimo stotine zanimljivih aktivnosti prilagođenih vašem detetu.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="fi fi-rr-family"></i></div>
+              <h3>Ojačati vezu</h3>
+              <p>Naše metode pomažu u izgradnji dijaloga i poverenja, pretvarajući učenje u vaše posebno zajedničko vreme.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="why-us" class="why-us-section">
+        <div class="container">
+          <h2 class="section-title">Zašto nam možete verovati?</h2>
+          <div class="why-us-container">
+            <div class="why-us-text">
+              <h3>Naš put — od roditelja do praktičara</h3>
+              <p>Jednom davno, baš kao i vi, tražili smo odgovore. Taj put nas je odveo do osnivanja vrtića, a zatim do otvaranja Montesori škole. Nismo samo teoretičari — mi smo praktičari.</p>
+              <p style="margin-top: var(--spacing-md);">Naš tim čine iskusni pedagozi, uključujući sertifikovane Montesori stručnjake. Delimo ono što je funkcionisalo u našim porodicama i unutar naše škole — ono što je probudilo radoznalost kod stotina dece i učinilo njihove odnose s roditeljima toplijim.</p>
+              <p style="margin-top: var(--spacing-md);">Naše iskustvo pokazalo je da su ovi principi i gotovi planovi neprocenjiv alat za sve koji rade s decom. Danas naša platforma okuplja roditelje, dadilje i pedagoge sa zajedničkim ciljem: pomoći svakom detetu da razvije svoj potencijal kroz zajedničke aktivnosti i poštovanje.</p>
+            </div>
+            <div class="why-us-image">
+              <img src="images/main2.jpg" alt="Naš tim">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+          <h2 class="section-title">Tri koraka do harmoničnog razvoja</h2>
+          <p class="section-subtitle">Naš sistem je savršeno prilagođen za ključni uzrast od 3 do 6 godina i funkcioniše po jednostavnoj shemi.</p>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Ispričajte nam o detetu</h3>
+              <p>Popunite kratku anketu: uzrast, interesovanja i vaši ciljevi. Ovo će nam pomoći da kreiramo individualnu mapu razvoja.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Dobijte svoj plan</h3>
+              <p>Svake nedelje šaljemo vam detaljan plan aktivnosti savršeno prilagođen vašem mališanu.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Razvijajte se zajedno</h3>
+              <p>Sledite jednostavna uputstva, pratite napredak i radujte se uspesima vašeg deteta provodeći kvalitetno vreme zajedno.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="about-section">
+        <div class="container">
+          <h2 class="section-title">Šta se nalazi unutar vašeg personalnog plana?</h2>
+          <div class="tab-content-inner">
+            <div class="tab-text">
+              <h3>Zanimljive razvojne aktivnosti</h3>
+              <p>Kratke sesije od 15 minuta za razvoj logike, motorike i govora. Aktivnosti su osmišljene tako da deca uče sa zanimanjem, bez prisile.</p>
+            </div>
+            <div class="tab-text">
+              <h3>Korisne veštine u svakodnevnom životu</h3>
+              <p>Učimo dete da slaže igračke, pomaže u kuhinji, sklapa odeću. Rutinu pretvaramo u zabavan proces koji razvija odgovornost.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Roditelji govore</h2>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://placehold.co/100x100/eeeeee/333333?text=A" alt="Fotografija korisnika">
+                <h4>Ana, mama 4-godišnjeg Maksima</h4>
+              </div>
+              <p>Mnogo radim i obično se jako umaram. A sin je pogrešio mamu i traži pažnju. Mašta mi je dovoljna samo za kratku priču. Sada se ne mučim. Otvorim plan i zajedno sa sinom igramo se, crtamo, vajamo... Vidim kako mu oči sijaju. I meni je radost biti s njim. Hvala!</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://placehold.co/100x100/eeeeee/333333?text=J" alt="Fotografija korisnika">
+                <h4>Julija, mama 5-godišnje Alise</h4>
+              </div>
+              <p>Ranije je moja Alisa brzo gubila interesovanje. Mogla sam pola večeri planirati sledeći dan, a ona bi za 5 minuta poništila sve moje napore. Međutim, od kad smo uključile BloomKids u naš dan, primetila sam da se ćerka budi. Zanima je. Ponekad čak i sama traži: "Mama, hajde da se igramo škole."</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://placehold.co/100x100/eeeeee/333333?text=O" alt="Fotografija korisnika">
+                <h4>Oleg, tata 6-godišnjeg Igora</h4>
+              </div>
+              <p>Uvek sam želeo da provodim više vremena sa sinom, ali nisam znao kako da počnem. Sada smo uz pomoć personalnog asistenta pronašli ono što je zanimljivo i meni i detetu. Naša poslednja strast je kuvanje — zajedno istražujemo recepte, kupujemo sastojke, kuvamo, a rezultat jedemo u celoj porodici.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing-section">
+        <div class="container">
+          <h2 class="section-title">Izaberite svoj plan</h2>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h3>Mesec dana</h3>
+              <p class="price">15€</p>
+              <p class="plan-age-focus">Idealno za decu od 3-6 godina</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Nedeljni planovi</li>
+                <li><i class="fi fi-rr-check"></i>Pristup svim materijalima</li>
+                <li><i class="fi fi-rr-check"></i>Podrška u četu</li>
+                <li class="feature-unavailable"><i class="fi fi-rr-cross-small"></i>Online konsultacije</li>
+              </ul>
+              <a href="#cta" class="btn btn-secondary">Izaberi</a>
+            </div>
+            <div class="pricing-card popular">
+              <h3>Pola godine</h3>
+              <p class="price">70€</p>
+              <p class="plan-age-focus">Idealno za decu od 3-6 godina</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Nedeljni planovi</li>
+                <li><i class="fi fi-rr-check"></i>Pristup svim materijalima</li>
+                <li><i class="fi fi-rr-check"></i>Podrška u četu</li>
+                <li><i class="fi fi-rr-check"></i>1 online konsultacija</li>
+              </ul>
+              <a href="#cta" class="btn btn-primary">Izaberi</a>
+            </div>
+            <div class="pricing-card">
+              <h3>Godinu dana</h3>
+              <p class="price">120€</p>
+              <p class="plan-age-focus">Idealno za decu od 3-6 godina</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Nedeljni planovi</li>
+                <li><i class="fi fi-rr-check"></i>Pristup svim materijalima</li>
+                <li><i class="fi fi-rr-check"></i>Podrška u četu</li>
+                <li><i class="fi fi-rr-check"></i>3 online konsultacije</li>
+              </ul>
+              <a href="#cta" class="btn btn-secondary">Izaberi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="cta-section">
+        <div class="container cta-container">
+          <div class="cta-content">
+            <h2 class="section-title">Spremni za početak putovanja?</h2>
+            <p>Pišite nam da biste dobili besplatnu konsultaciju i saznali kako BloomKids može pomoći upravo vašoj porodici. Odgovorićemo na sva pitanja i pomoći vam da pronađete najbolji početak.</p>
+            <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary" style="margin-top: 16px;">Napisati na Telegram</a>
+          </div>
+          <div class="cta-image-desktop">
+            <img src="images/main3.jpg" alt="Zajednička aktivnost">
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer id="contacts" class="main-footer">
+      <div class="container footer-container">
+        <div class="footer-about">
+          <a href="/" class="logo" style="flex-shrink: 0;"><img src="images/logo.svg" alt="BloomKids Logo"></a>
+          <p>Pomažemo roditeljima, dadiljama i pedagozima da razvijaju decu od 3 do 6 godina kroz zajedničke aktivnosti zasnovane na humanističkoj pedagogiji.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakti</h4>
+          <a href="https://t.me/fruiskra" target="_blank">Naš Telegram kanal</a>
+          <a href="https://www.instagram.com/frushka_iskra/" target="_blank">Naš Instagram</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-highlight">@natalia_frushkaiskra</a>
+        </div>
+        <div class="footer-col">
+          <h4>Dokumenta</h4>
+          <a href="../Docs/SL_RU_Politika_konfidentsialnosti.pdf" target="_blank">Politika privatnosti</a>
+          <a href="../Docs/SL_RU_Publichnaya_oferta.pdf" target="_blank">Javna ponuda</a>
+          <a href="../Docs/SL_RU_Cookie_Policy.pdf" target="_blank">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024-2026 BloomKids. Sva prava zadržana.</p>
+      </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var mainNav = document.querySelector('.main-nav');
+            if (menuToggle && mainNav) {
+                var mobileNavClone = mainNav.cloneNode(true);
+                mobileNavClone.classList.add('main-nav-mobile');
+                mobileNavClone.classList.remove('main-nav');
+                document.body.appendChild(mobileNavClone);
+                menuToggle.addEventListener('click', function() {
+                    mobileNavClone.classList.toggle('active');
+                    var icon = menuToggle.querySelector('i');
+                    if (mobileNavClone.classList.contains('active')) { icon.className = 'fi fi-rr-cross'; }
+                    else { icon.className = 'fi fi-rr-menu-burger'; }
+                });
+                mobileNavClone.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        if (!e.target.hasAttribute('target')) {
+                            mobileNavClone.classList.remove('active');
+                            menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
