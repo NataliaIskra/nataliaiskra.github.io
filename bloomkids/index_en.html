@@ -319,4 +319,99 @@
                 <li><i class="fi fi-rr-check"></i>Chat support</li>
                 <li class="feature-unavailable"><i class="fi fi-rr-cross-small"></i>Online consultations</li>
               </ul>
-              <a href="#cta" class="btn btn-secondary">Choos
+              <a href="#cta" class="btn btn-secondary">Choose</a>
+            </div>
+            <div class="pricing-card popular">
+              <h3>6 Months</h3>
+              <p class="price">€70</p>
+              <p class="plan-age-focus">Perfect for children aged 3-6</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Weekly plans</li>
+                <li><i class="fi fi-rr-check"></i>Access to all materials</li>
+                <li><i class="fi fi-rr-check"></i>Chat support</li>
+                <li><i class="fi fi-rr-check"></i>1 online consultation</li>
+              </ul>
+              <a href="#cta" class="btn btn-primary">Choose</a>
+            </div>
+            <div class="pricing-card">
+              <h3>1 Year</h3>
+              <p class="price">€120</p>
+              <p class="plan-age-focus">Perfect for children aged 3-6</p>
+              <ul class="features-list">
+                <li><i class="fi fi-rr-check"></i>Weekly plans</li>
+                <li><i class="fi fi-rr-check"></i>Access to all materials</li>
+                <li><i class="fi fi-rr-check"></i>Chat support</li>
+                <li><i class="fi fi-rr-check"></i>3 online consultations</li>
+              </ul>
+              <a href="#cta" class="btn btn-secondary">Choose</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="cta-section">
+        <div class="container cta-container">
+          <div class="cta-content">
+            <h2 class="section-title">Ready to start the journey?</h2>
+            <p>Write to us to get a free consultation and find out how BloomKids can help your family. We'll answer all your questions and help you find the best start.</p>
+            <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary" style="margin-top: 16px;">Write on Telegram</a>
+          </div>
+          <div class="cta-image-desktop">
+            <img src="images/main3.jpg" alt="Joint activity">
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer id="contacts" class="main-footer">
+      <div class="container footer-container">
+        <div class="footer-about">
+          <a href="/" class="logo" style="flex-shrink: 0;"><img src="images/logo.svg" alt="BloomKids Logo"></a>
+          <p>We help parents, nannies and educators develop children aged 3 to 6 through shared activities based on humanistic pedagogy.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacts</h4>
+          <a href="https://t.me/fruiskra" target="_blank">Our Telegram channel</a>
+          <a href="https://www.instagram.com/frushka_iskra/" target="_blank">Our Instagram</a>
+          <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="footer-highlight">@natalia_frushkaiskra</a>
+        </div>
+        <div class="footer-col">
+          <h4>Documents</h4>
+          <a href="../Docs/SL_EN_Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+          <a href="../Docs/SL_EN_Public_Offer.pdf" target="_blank">Public Offer</a>
+          <a href="../Docs/SL_EN_Cookie_Policy.pdf" target="_blank">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024-2026 BloomKids. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var mainNav = document.querySelector('.main-nav');
+            if (menuToggle && mainNav) {
+                var mobileNavClone = mainNav.cloneNode(true);
+                mobileNavClone.classList.add('main-nav-mobile');
+                mobileNavClone.classList.remove('main-nav');
+                document.body.appendChild(mobileNavClone);
+                menuToggle.addEventListener('click', function() {
+                    mobileNavClone.classList.toggle('active');
+                    var icon = menuToggle.querySelector('i');
+                    if (mobileNavClone.classList.contains('active')) { icon.className = 'fi fi-rr-cross'; }
+                    else { icon.className = 'fi fi-rr-menu-burger'; }
+                });
+                mobileNavClone.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        if (!e.target.hasAttribute('target')) {
+                            mobileNavClone.classList.remove('active');
+                            menuToggle.querySelector('i').className = 'fi fi-rr-menu-burger';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
