@@ -21,7 +21,7 @@
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a[]).push(arguments)};
        m[i].l=1*new Date();
        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -116,8 +116,8 @@
         .cta-image-desktop { display: none; }
         
         .pricing-section { padding: var(--spacing-xl) 0; background-color: var(--color-light-gray); }
-        .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); }
-        .pricing-card { background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .pricing-grid { display: flex; justify-content: center; width: 100%; }
+        .pricing-card { background-color: var(--color-white); border-radius: var(--border-radius-soft); padding: var(--spacing-lg); text-align: center; border: 1px solid var(--color-border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; max-width: 500px; width: 100%; }
         .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
         .pricing-card h3 { font-family: var(--font-primary); font-size: 1.6rem; color: var(--color-secondary); }
         .price { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); margin: var(--spacing-sm) 0 var(--spacing-sm); display: flex; align-items: baseline; justify-content: center; gap: 12px; }
@@ -158,7 +158,6 @@
           .features-grid { grid-template-columns: repeat(2, 1fr); }
           .about-section .tab-content-inner { grid-template-columns: 1fr 1fr; }
           .testimonials-grid { grid-template-columns: repeat(2, 1fr); max-width: 820px; margin-left: auto; margin-right: auto; }
-          .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 800px; margin: 0 auto; }
           .cta-container { flex-direction: row; align-items: center; gap: var(--spacing-xl); padding: var(--spacing-xl); }
           .cta-content { text-align: left; }
           .cta-content .section-title, .cta-content p { text-align: left; margin-left: 0; }
@@ -333,19 +332,7 @@
                           <li><i class="fi fi-rr-check"></i><div>Все учебные материалы</div></li>
                           <li><i class="fi fi-rr-check"></i><div>Прогулки и экскурсии</div></li>
                       </ul>
-                      <a href="#contacts" class="btn btn-primary">Выбрать</a>
-                  </div>
-                  <div class="pricing-card">
-                      <h3>Продленка</h3>
-                      <p class="price">230€/мес</p>
-                      <p class="plan-age-focus">Для тех, кто учится в другой школе</p>
-                       <ul class="features-list">
-                          <li><i class="fi fi-rr-check"></i><div>Пребывание в Монтессори-среде</div></li>
-                          <li><i class="fi fi-rr-check"></i><div>Помощь с домашними заданиями</div></li>
-                          <li><i class="fi fi-rr-check"></i><div>Расширение кругозора</div></li>
-                          <li><i class="fi fi-rr-check"></i><div>Языковая практика</div></li>
-                      </ul>
-                      <a href="#contacts" class="btn btn-secondary">Выбрать</a>
+                      <a href="https://t.me/natalia_frushkaiskra" target="_blank" class="btn btn-primary">Выбрать программу</a>
                   </div>
               </div>
               <p class="pricing-footnote">
